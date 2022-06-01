@@ -1,9 +1,15 @@
 import torch
 from torch import nn
-from torch_geometric.nn import MessagePassing
+from torch_geometric.nn import MessagePassing, TopKPooling
+from torch_geometric.data import Data
 from torch_geometric.utils import remove_self_loops, add_self_loops
+from synthetic_data import datagen
+import numpy as np
+import matplotlib.pyplot as plt
 
 
+
+#Building Convolutional layer
 class SAGEConv(MessagePassing):
     def __init__(self, in_channels, out_channels):
         super(SAGEConv, self).__init__(aggr='max') #  "Max" aggregation.
@@ -26,6 +32,8 @@ class SAGEConv(MessagePassing):
     def message(self, x_j):
         # x_j has shape [E, in_channels]
 
+        #Aggregates neighboring nodes
+
         x_j = self.lin(x_j)
         x_j = self.act(x_j)
         
@@ -41,3 +49,20 @@ class SAGEConv(MessagePassing):
         new_embedding = self.update_act(new_embedding)
         
         return new_embedding
+
+#Defining GNN
+class NodeClassifier(torch.nn.Module):
+    def __init__(self,num_node_features,hidden_features,num_classes):
+        super(NodeClassifier,self).__init__()
+
+        self.conv1 = SAGEConv(num_node_features,hidden_features)
+        self.conv2 = SAGEConv(hidden_features,num_classes)
+
+
+    def forward(self,x, edge_index):
+        
+        x = self.conv1(x,edge_index)
+        x = self.conv2(x,edge_index)
+
+        return x
+
