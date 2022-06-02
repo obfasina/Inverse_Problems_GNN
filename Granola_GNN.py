@@ -57,12 +57,15 @@ class NodeClassifier(torch.nn.Module):
 
         self.conv1 = SAGEConv(num_node_features,hidden_features)
         self.conv2 = SAGEConv(hidden_features,num_classes)
+        self.lin1 = torch.nn.Linear(hidden_features,num_classes)
 
 
     def forward(self,x, edge_index):
         
+        
         x = self.conv1(x,edge_index)
         x = self.conv2(x,edge_index)
+        x = self.lin1(x)
 
         return x
 

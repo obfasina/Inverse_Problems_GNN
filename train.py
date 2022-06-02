@@ -7,6 +7,8 @@ from synthetic_data import datagen
 import numpy as np
 import matplotlib.pyplot as plt
 from Granola_GNN import NodeClassifier
+from torch_geometric.data import DataLoader
+
 
 # Defining data
 
@@ -62,34 +64,46 @@ edge_index = torch.tensor(np.concatenate((source,target),axis=0))
 
 
 data = Data(x=torch.tensor(nfeat,dtype=torch.float),y=torch.tensor(nlabel,dtype=torch.float),edge_index=edge_index)
-print("TEST",data.x.dtype)
-print("TEST AGAIN",data.edge_index.dtype)
+
+datalist = []
+ngraphs = 10
+for i in range(ngraphs):
+    datalist.append(data)
+
+print("Here!!",len(datalist))
+
+loader = DataLoader(datalist,batch_size=2,shuffle=True)
+
+for batch in loader:
+    print(batch)
+
+
+
+
 
 # Script for training GNN 
 
 
-model = NodeClassifier(num_node_features = 2, hidden_features = 2, num_classes = 100)
+model = NodeClassifier(num_node_features = 2, hidden_features = 2, num_classes = 1)
 optimizer = torch.optim.Adam(model.parameters(),lr=0.01)
-criterion = torch.nn.MSELoss(requires_grad=True)
+criterion = torch.nn.MSELoss()
 model = model.float()
 
 def train():
+    loss_all = 0
+    for data in loader:
 
-    model.train()
-    optimizer.zero_grad()
-    out = model(data.x, data.edge_index)
-    print("Output",out.size())
-    print("Target",data.y.size())
-    pred = torch.argmax(out, dim=1)
-    print(pred)
-    print(data.y)
-    loss = criterion( pred, data.y )
-    print(loss)
-    loss.backward()
-    optimizer.step()
+        model.train()   
+        optimizer.zero_grad()
+        out = model(data.x, data.edge_index)
+        loss = criterion( out, data.y )
+        loss.backward()
+        loss_all += loss.item()
+        optimizer.step()
 
-    return loss
+    return loss_all/5
 
+"""
 
 def test():
     model.eval()
@@ -99,9 +113,14 @@ def test():
     test_acc = int(test_correct.sum()) / int(data.test_mask.sum())  # Derive ratio of correct predictions.
     return test_acc
 
+"""
 
-for epoch in range(1, 201):
+for epoch in range(1, 9):
+    print("Epoch:",epoch)
     loss = train()
+    print("Loss:",loss)
     if epoch % 10 == 0:
         test_acc = test()
         print(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Test Accuracy: {test_acc}')
+
+
