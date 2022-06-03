@@ -16,22 +16,53 @@ import matplotlib.pyplot as plt
 
 #Defining eigenfunctions, source, and eigenvalue
 
+def sourced(varint):
 
+
+    if varint == 0:
+        f = lambda x, y : (x**3 + y)
+    if varint == 1:
+        f = lambda x, y : (x**2 + y**2)
+    if varint == 2:
+        f = lambda x, y : (y-x)
+    if varint == 3:
+        f = lambda x, y : ((4*x)-y)
+    if varint == 4:
+        f = lambda x, y : (-x**2 - y**2)
+    if varint == 5:
+        f = lambda x, y : (x*y)
+    if varint == 6:
+        f = lambda x, y : (np.exp(-x + y))
+    if varint == 7:
+        f = lambda x, y : (np.exp(-y + x)*-x)
+    if varint == 8:
+        f = lambda x, y : (x**2/y)
+    if varint == 9:
+        f = lambda x, y : (x+ (y/x))
+
+
+
+    return f
 
 
 
 #Data generation(returns solution mesh)
-def datagen(x,y,ev_m,ev_n):
+def datagen(x,y,ev_m,ev_n,en,src):
+
+    """
+     x = input x coordinate
+     y = input y coordinate 
+     ev_m = eigenvalues for x - basis of eigenfunctions
+     ev_n = eigenvalues for y - basis of eigenfunctions
+     en = specify which mesh you want (by specifying the eigenvalue)
+
+    """
 
     def X(x,m,xvec):
         return np.sin( ((m+1)*np.pi*x) /len(xvec) )
 
     def Y(y,n,yvec):
         return np.sin( ((n+1)*np.pi*y) /len(yvec) ) 
-
-    def source(x,y):
-        f =(-x**2-y**2)
-        return f
 
     def Evalue(x,y,m,n,xvec,yvec):
 
@@ -43,7 +74,7 @@ def datagen(x,y,ev_m,ev_n):
         for i in range(len(xvec)):
             for j in range(len(yvec)):
 
-                interm.append(source(x,y)*X(x,m,xvec)*Y(y,n,yvec))
+                interm.append(src(x,y)*X(x,m,xvec)*Y(y,n,yvec))
 
         sumint = np.sum(interm)
 
@@ -65,22 +96,9 @@ def datagen(x,y,ev_m,ev_n):
             eval_meshlist.append(mesh)
         
 
-    test = np.array(eval_meshlist[50])
-    ntest = test.reshape((10,10))
+    test = np.array(eval_meshlist[en]) # returns vector of solutions
+    ntest = test.reshape((10,10)) # returns mesh of solutions
     return ntest
-
-x_i = np.arange(0,10)
-y_i = np.arange(0,10)
-ev_mi = np.arange(0,10)
-ev_ni = np.arange(0,10)
-
-
-fmesh = datagen(x_i,y_i,ev_mi,ev_ni)
-plt.imshow(fmesh)
-print(fmesh.shape)
-
-
-        
 
 
 
