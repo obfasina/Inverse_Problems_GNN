@@ -4,11 +4,12 @@ from torch import nn
 from torch_geometric.nn import MessagePassing, TopKPooling
 from torch_geometric.data import Data
 from torch_geometric.utils import remove_self_loops, add_self_loops
-from synthetic_data import datagen, sourced
+from synthetic_data import datagen#, sourced
 import numpy as np
 import matplotlib.pyplot as plt
 from Granola_GNN import NodeClassifier
 from torch_geometric.data import DataLoader
+import sys
 
 """
 
@@ -144,7 +145,7 @@ vad_loader = torch.load('vad_data.pt')
 
 
 model = NodeClassifier(num_node_features = 3, hidden_features = 3, num_classes = 1)
-optimizer = torch.optim.Adam(model.parameters(),lr=0.01)
+optimizer = torch.optim.Adam(model.parameters(),lr=0.001)
 criterion = torch.nn.MSELoss()
 model = model.float()
 
@@ -156,11 +157,13 @@ def train():
         model.train()   
         optimizer.zero_grad()
         out = model(data.x, data.edge_index)
+        print("Model output:",out.size())
         loss = criterion( out, data.y )
         loss.backward()
         loss_all += loss.item() # adds loss for each batch
         optimizer.step()
         c = c + 1
+        sys.exit()
 
     return loss_all/c # reporting average loss per batch
 
@@ -197,13 +200,43 @@ for epoch in range(1, 200):
 
 
 #Testing model with MSE
-
+tloss = 0
 for data in test_loader:
 
     model.eval()
     out = model(data.x,data.edge_index)
-    print(out.shape)
-    loss = criterion(out,data.y)
-    print(loss)
+    tloss += criterion(out,data.y)
+    #print(tloss)
 
-print("MSE",loss)
+print("Average Test Loss (MSE)",tloss/len(test_loader))
+
+
+plt.figure()
+plt.title("Experiment 8")
+plt.plot(svtrain)
+plt.plot(svad)
+plt.yscale("log")
+plt.xlabel("Number of Epochs")
+plt.ylabel("Loss (Log-Scale)")
+plt.legend(["Train Loss","Validation Loss"])
+plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/exp/exp_8_train_vad.png")
+plt.show()
+
+plt.figure()
+plt.title("Experiment 8 - Train Loss")
+plt.plot(svtrain)
+plt.yscale("log")
+plt.xlabel("Number of Epochs")
+plt.ylabel("Loss (Log-Scale)")
+plt.legend(["Train Loss","Validation Loss"])
+plt.show()
+plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/exp/exp_8_train.png")
+
+plt.figure()
+plt.title("Experiment 8 - Validation Loss")
+plt.plot(svad)
+plt.yscale("log")
+plt.xlabel("Number of Epochs")
+plt.ylabel("Loss (Log-Scale)")
+plt.show()
+plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/exp/exp_8_vad.png")
