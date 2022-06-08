@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from Granola_GNN import NodeClassifier
 from torch_geometric.data import DataLoader
 
-
+"""
 
 # ---------------------------------------   Data import ----------------------------------# 
 
@@ -34,7 +34,7 @@ nfeat = np.array(x)
 source = []
 target = []
 for i in range(nfeat.shape[0]):
-    ind = np.argwhere(np.all(np.abs(nfeat[i] - nfeat) <= 1,axis=1)).squeeze()
+    ind = np.argwhere(np.all(np.abs(nfeat[i] - nfeat) <= 1,axis=1)).squeeze() # checking node distance on grid
     source.append(np.repeat(i,len(ind)))
     target.append(ind)
 
@@ -62,6 +62,7 @@ testind = [x for x in graphs if x not in tempind]
 
 
 
+
 #Getting 100 solution meshes 
 
 train_datalist = []
@@ -72,14 +73,16 @@ for i in range(len(trainind)):
     j= int(np.floor(trainind[i]/100)) # specifies the paramter function
     a = int(np.floor(trainind[i]/10)) # Specifies the eigenvalue coefficient
 
-    print("DEBUG",int(j))
+    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a,sourced(j))
+    totfeat = np.concatenate((nfeat,vmesh),axis = 1)
+    totparam  = np.array([sourced(j)(x,y) for x in range(10) for y in range(10)])
 
-    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a,sourced(int(j)))
-    train_datalist.append(Data(x=torch.tensor(nfeat,dtype=torch.float),y=torch.tensor(vmesh,dtype=torch.float),edge_index=edge_index))
+    train_datalist.append(Data(x=torch.tensor(totfeat,dtype=torch.float),y=torch.tensor(totparam,dtype=torch.float),edge_index=edge_index))
 
-train_loader = DataLoader(train_datalist,batch_size=5,shuffle=True)
+train_loader = DataLoader(train_datalist,batch_size=10,shuffle=True)
 torch.save(train_loader,"train_data.pt")
 print("Number of training samples",len(train_datalist))
+
 
 
 vad_datalist = []
@@ -87,13 +90,16 @@ for i in range(len(vadind)):
 
     print(i)
 
-    j= np.floor(trainind[i]/100) # specifies the paramter function
-    a=np.floor(trainind[i]/10) # Specifies the eigenvalue coefficient
+    j=int(np.floor(vadind[i]/100)) # specifies the paramter function
+    a=int(np.floor(vadind[i]/10)) # Specifies the eigenvalue coefficient
 
-    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a,source(j))
-    vad_datalist.append(Data(x=torch.tensor(nfeat,dtype=torch.float),y=torch.tensor(vmesh,dtype=torch.float),edge_index=edge_index))
+    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a,sourced(j))
+    totfeat = np.concatenate((nfeat,vmesh),axis = 1)
+    totparam  = np.array([sourced(j)(x,y) for x in range(10) for y in range(10)])
 
-vad_loader = DataLoader(vad_datalist,batch_size=5,shuffle=True)
+    vad_datalist.append(Data(x=torch.tensor(totfeat,dtype=torch.float),y=torch.tensor(totparam,dtype=torch.float),edge_index=edge_index))
+
+vad_loader = DataLoader(vad_datalist,batch_size=10,shuffle=True)
 torch.save(vad_loader,"vad_data.pt")
 print("Number of Validation samples",len(vad_datalist))
 
@@ -103,15 +109,17 @@ for i in range(len(testind)):
 
     print(i)
 
-    j= np.floor(trainind[i]/100) # specifies the paramter function
-    a = np.floor(trainind[i]/10) # Specifies the eigenvalue coefficient
+    j= int(np.floor(testind[i]/100)) # specifies the paramter function
+    a = int(np.floor(testind[i]/10)) # Specifies the eigenvalue coefficient
+
+    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a, sourced(j))
+    totfeat = np.concatenate((nfeat,vmesh),axis = 1)
+    totparam  = np.array([sourced(j)(x,y) for x in range(10) for y in range(10)])
+
+    test_datalist.append(Data(x=torch.tensor(totfeat,dtype=torch.float),y=torch.tensor(totparam,dtype=torch.float),edge_index=edge_index))
 
 
-    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a, source(j))
-    test_datalist.append(Data(x=torch.tensor(nfeat,dtype=torch.float),y=torch.tensor(vmesh,dtype=torch.float),edge_index=edge_index))
-
-
-test_loader = DataLoader(test_datalist,batch_size=5,shuffle=True)
+test_loader = DataLoader(test_datalist,batch_size=10,shuffle=True)
 torch.save(test_loader,'test_data.pt')
 print("Number of test samples",len(test_datalist))
 
@@ -123,6 +131,8 @@ print("Number of test samples",len(test_datalist))
 #    print(batch)
 
 
+"""
+
 #Load train/test data
 
 train_loader = torch.load('train_data.pt')
@@ -133,7 +143,7 @@ vad_loader = torch.load('vad_data.pt')
 # Script for training GNN 
 
 
-model = NodeClassifier(num_node_features = 2, hidden_features = 2, num_classes = 1)
+model = NodeClassifier(num_node_features = 3, hidden_features = 3, num_classes = 1)
 optimizer = torch.optim.Adam(model.parameters(),lr=0.01)
 criterion = torch.nn.MSELoss()
 model = model.float()

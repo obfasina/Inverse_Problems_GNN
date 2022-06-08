@@ -36,9 +36,9 @@ def sourced(varint):
     if varint == 7:
         f = lambda x, y : (np.exp(-y + x)*-x)
     if varint == 8:
-        f = lambda x, y : (x**2/y)
+        f = lambda x, y : (x**2 + y)
     if varint == 9:
-        f = lambda x, y : (x+ (y/x))
+        f = lambda x, y : (x+ (y*x) )
 
 
 
@@ -96,9 +96,9 @@ def datagen(x,y,ev_m,ev_n,en,src):
             eval_meshlist.append(mesh)
         
 
-    test = np.array(eval_meshlist[en]) # returns vector of solutions
+    test = np.array(eval_meshlist[en]).reshape((100,1)) # returns vector of solutions
     ntest = test.reshape((10,10)) # returns mesh of solutions
-    return ntest
+    return test
 
 
 
