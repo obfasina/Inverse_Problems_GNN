@@ -11,6 +11,8 @@ from Granola_GNN import NodeClassifier
 from torch_geometric.data import DataLoader
 import sys
 
+
+
 """
 
 # ---------------------------------------   Data import ----------------------------------# 
@@ -159,6 +161,7 @@ def train():
         out = model(data.x, data.edge_index)
         print("Model output:",out.size())
         loss = criterion( out, data.y )
+        
         loss.backward()
         loss_all += loss.item() # adds loss for each batch
         optimizer.step()

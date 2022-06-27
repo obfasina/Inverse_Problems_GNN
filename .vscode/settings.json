@@ -1,3 +1,4 @@
 {
-    "python.defaultInterpreterPath": "pythone"
+    "python.defaultInterpreterPath": "pythone",
+    "explorer.compactFolders": false
 }

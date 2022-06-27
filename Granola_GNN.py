@@ -82,6 +82,7 @@ class NodeClassifier(torch.nn.Module):
         x = self.act1(x)
         x = self.conv3(x,edge_index)
         x = self.lin1(x)
+        
 
         return x
 
