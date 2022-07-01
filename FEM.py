@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import interpolate
 import pickle
-
+import sys
 #script for calling FEM solver
 """
 print("Changing to master directory:")
@@ -49,42 +49,75 @@ print(np.mean(data))
 
 np.min(sol.point_data["node_groups"])
 """
+
+
+GNNout = np.load('GNN_output.npy').squeeze()
+print(len(GNNout))
+
+nGNNout = []
+bs = 100 # batch size
+for i in range(bs):
+    a = i*2345
+    b = (i+1)*2345
+    nGNNout.append(np.mean(GNNout[a:a+b]))
+
+nsamp = 1000
+datagen = np.arange(nsamp)
+
 #Generating poisson_neumann data
 data = []
 coord = []
 flux = []
 mnsol = []
 
-for i in range(1000):
+switch = 'OPT'
+if switch == 'datagen':
 
-    os.system( "sfepy-run simple /Users/oluwadamilolafasina/Documents/sfepy-master/sfepy/examples/diffusion/poisson_neumann_edit.py -d prm=" + str(i) + " -o /Users/oluwadamilolafasina/Inverse_GNN/FEM_output/pmesh_"+str(i))
-    sol = meshio.read("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/" + "pmesh_" + str(i) + ".vtk")
-    data.append(sol.point_data['t'])
+    for i in datagen:
+
+        print(i)
+        os.system( "sfepy-run simple /Users/oluwadamilolafasina/Documents/sfepy-master/sfepy/examples/diffusion/poisson_neumann_edit.py -d prm=" + str(i) + " -o /Users/oluwadamilolafasina/Inverse_GNN/FEM_output/pmesh_"+str(i))
+        sol = meshio.read("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/" + "pmesh_" + str(i) + ".vtk")
+        data.append(sol.point_data['t'])
+        flux.append(i)
+        #Visualization
+        #os.system("~/Documents/sfepy-master/resview.py pmesh_" + str(i) + ".vtk -o /Users/oluwadamilolafasina/Inverse_GNN/Figures/flux" + str(i) + ".png --off-screen")
+
     coord.append(sol.points[:,:2])
-    flux.append(i)
-    mnsol.append(np.mean(sol.point_data['t']))
+    #Saving data
 
-    #Visualization
-    #os.system("~/Documents/sfepy-master/resview.py pmesh_" + str(i) + ".vtk -o /Users/oluwadamilolafasina/Inverse_GNN/Figures/flux" + str(i) + ".png --off-screen")
+    with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/solution_data","wb") as fp:
+        pickle.dump(data,fp)
 
-print("Checking Shape:")
-print(coord[1].shape)
-print(data[1].shape)
+    with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/coordinate_data","wb") as fb:
+        pickle.dump(coord,fb)
 
-print("Checking solution data:")
+    with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/input_flux","wb") as fc:
+        pickle.dump(flux,fc)
 
-plt.title("Mean solution vs flux")
-plt.plot(flux,mnsol)
-plt.ylabel("Mean Solution")
-plt.xlabel("Flux")
+if switch == 'OPT':
 
-#Savign data
+    print("SANITY check:",nGNNout)
+    print(len(nGNNout))
+    for i in nGNNout:
 
-with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/solution_data","wb") as fp:
-    pickle.dump(data,fp)
+        print("AGAIN",i)
+        os.system( "sfepy-run simple /Users/oluwadamilolafasina/Documents/sfepy-master/sfepy/examples/diffusion/poisson_neumann_edit.py -d prm=" + str(i) + " -o /Users/oluwadamilolafasina/Inverse_GNN/FEM_output/omesh_"+str(i))
+        sol = meshio.read("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/" + "omesh_" + str(i) + ".vtk")
+        data.append(sol.point_data['t'])
+        flux.append(i)
+        #Visualization
+        #os.system("~/Documents/sfepy-master/resview.py pmesh_" + str(i) + ".vtk -o /Users/oluwadamilolafasina/Inverse_GNN/Figures/flux" + str(i) + ".png --off-screen")
 
-with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/coordinate_data","wb") as fb:
-    pickle.dump(coord,fb)
+    coord.append(sol.points[:,:2])
+    #Saving data
 
-with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/input_flux","wb") as fc:
-    pickle.dump(flux,fc)
+    with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/solution_data_OPT","wb") as fp:
+        pickle.dump(data,fp)
+
+    with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/coordinate_data_OPT","wb") as fb:
+        pickle.dump(coord,fb)
+
+    with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/input_flux_OPT","wb") as fc:
+        pickle.dump(flux,fc)
+    

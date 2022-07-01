@@ -8,153 +8,94 @@ from synthetic_data import datagen#, sourced
 import numpy as np
 import matplotlib.pyplot as plt
 from Granola_GNN import NodeClassifier
-from torch_geometric.data import DataLoader
+from torch_geometric.loader import DataLoader
 import sys
 import pickle
+import os
+from torch.autograd import Variable
 
-with open("solution_data","rb") as fd:
+
+
+#Defining Pytorch geometric graph
+
+def graphgen(gdata,gcoord,glabel):
+
+    "gdata = node solution values; gcoord = node coordinates; glabel = node labels"
+
+
+    #Defining node features
+    nodefeats = torch.tensor(gdata.reshape( (len(gdata),1) ),dtype=torch.float)
+    nodelabel = torch.tensor(np.repeat(glabel,len(gdata)),dtype=torch.float)
+
+    # NOTE could swamp method for knn
+    #Define edge index
+    target = []
+    for i in range(len(gdata)): # For each node get 4 nearest neighbors
+        target.append(np.argsort( np.sqrt( (gcoord[:,0] - gcoord[i,0])**2 + (gcoord[:,1] - gcoord[i,1])**2 ) )[1:5])
+        
+    source = []
+    for i in range(len(gdata)):
+        source.append(np.repeat(i,4))
+
+    source = np.concatenate(source,axis=0)
+    target = np.concatenate(target,axis=0)
+    edges = torch.tensor(np.concatenate( ( source.reshape((len(source),1)),target.reshape((len(target),1)) ), axis=1 ).T,dtype=torch.long)
+
+    #Define Graph
+    graph = Data(x=nodefeats,y=nodelabel,edge_index=edges,pos=gcoord)
+
+    return graph
+
+
+#Loading data
+print("Time to play:")
+print("Loading lists of data")
+with open("/Users/oluwadamilolafasina/Inverse_GNN/solution_data","rb") as fd:
     data = pickle.load(fd)
 
-with open("coordinate_data","rb") as fe:
+with open("/Users/oluwadamilolafasina/Inverse_GNN/coordinate_data","rb") as fe:
     coord = pickle.load(fe)
 
-with open("input_flux","rb") as ff:
+with open("/Users/oluwadamilolafasina/Inverse_GNN/input_flux","rb") as ff:
     flux = pickle.load(ff)
+ 
+npos = coord[1] #Currently the coordinates are the same for every list in index - need to fix later
+
+"""
+#Generating graphs
+
+ind = np.arange(len(data))#Shuffled indices
+np.random.shuffle(ind)
+
+pygraphs = []
+for i in range(len(data)):
+    print(i)
+    pygraphs.append(graphgen(data[ind[i]],npos,flux[ind[i]]))
+
+
+#Saving/Loading graph data
+with open("/Users/oluwadamilolafasina/Inverse_GNN/datagraphs","wb") as fg:
+    pickle.dump(pygraphs,fg)
 
 """
 
-# ---------------------------------------   Data import ----------------------------------# 
-
-#Define problem variables
-x_i = np.arange(0,10)
-y_i = np.arange(0,10)
-ev_mi = np.arange(0,10)
-ev_ni = np.arange(0,10)
-slist = np.arange(10)
+with open("/Users/oluwadamilolafasina/Inverse_GNN/datagraphs","rb") as ff:
+    pygraphs = pickle.load(ff)
 
 
-#generate [100 x 2] node feature array with each index being a coordinate
-x = [] 
-for i in range(len(x_i)):
-    for j in range(len(y_i)):
-        x.append(np.array([i,j]))
-nfeat = np.array(x)
+#train/validation/test split (70/20/10) [NOTE: Data has already been shuffled] in data loaders
 
+#Define data loaders
+trainloader = DataLoader(pygraphs[:int(round(len(data)*.7))],batch_size=100,shuffle=True)
+vadloader = DataLoader(pygraphs[ int(round(len(data)*.7)): int(round(len(data)*.9))],batch_size=100,shuffle=True)
+testloader = DataLoader(pygraphs[int(round(len(data)*.9)):],batch_size=100,shuffle=True)
 
-#Create edge index array  (Defines graph connectivity using coordinate vector; code block below is specific to graphs with spatial coordinates)
-source = []
-target = []
-for i in range(nfeat.shape[0]):
-    ind = np.argwhere(np.all(np.abs(nfeat[i] - nfeat) <= 1,axis=1)).squeeze() # checking node distance on grid
-    source.append(np.repeat(i,len(ind)))
-    target.append(ind)
-
-source = np.concatenate(source, axis=0)
-target = np.concatenate(target, axis=0)
-
-source = np.array(source).reshape((1,source.shape[0]))
-target = np.array(target).reshape((1,target.shape[0]))
-edge_index = torch.tensor(np.concatenate((source,target),axis=0))
-
-
-
-#Defining Train/Test/Split Indeces
-
-ntraingraphs = 700
-nvadgraphs = 200
-ntestgraphs = 100
-ntotgraphs = ntraingraphs + ntestgraphs + nvadgraphs
-graphs = np.arange(ntotgraphs)
-
-trainind = np.random.choice(graphs,ntraingraphs,replace=False)
-vadind = [x for x in graphs if x not in trainind][:nvadgraphs]
-tempind =np.hstack((trainind,vadind))
-testind = [x for x in graphs if x not in tempind]
-
-
-
-
-#Getting 100 solution meshes 
-
-train_datalist = []
-for i in range(len(trainind)):
-
-    print(i)
-
-    j= int(np.floor(trainind[i]/100)) # specifies the paramter function
-    a = int(np.floor(trainind[i]/10)) # Specifies the eigenvalue coefficient
-
-    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a,sourced(j))
-    totfeat = np.concatenate((nfeat,vmesh),axis = 1)
-    totparam  = np.array([sourced(j)(x,y) for x in range(10) for y in range(10)])
-
-    train_datalist.append(Data(x=torch.tensor(totfeat,dtype=torch.float),y=torch.tensor(totparam,dtype=torch.float),edge_index=edge_index))
-
-train_loader = DataLoader(train_datalist,batch_size=10,shuffle=True)
-torch.save(train_loader,"train_data.pt")
-print("Number of training samples",len(train_datalist))
-
-
-
-vad_datalist = []
-for i in range(len(vadind)):
-
-    print(i)
-
-    j=int(np.floor(vadind[i]/100)) # specifies the paramter function
-    a=int(np.floor(vadind[i]/10)) # Specifies the eigenvalue coefficient
-
-    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a,sourced(j))
-    totfeat = np.concatenate((nfeat,vmesh),axis = 1)
-    totparam  = np.array([sourced(j)(x,y) for x in range(10) for y in range(10)])
-
-    vad_datalist.append(Data(x=torch.tensor(totfeat,dtype=torch.float),y=torch.tensor(totparam,dtype=torch.float),edge_index=edge_index))
-
-vad_loader = DataLoader(vad_datalist,batch_size=10,shuffle=True)
-torch.save(vad_loader,"vad_data.pt")
-print("Number of Validation samples",len(vad_datalist))
-
-
-test_datalist = []
-for i in range(len(testind)):
-
-    print(i)
-
-    j= int(np.floor(testind[i]/100)) # specifies the paramter function
-    a = int(np.floor(testind[i]/10)) # Specifies the eigenvalue coefficient
-
-    vmesh = datagen(x_i,y_i,ev_mi,ev_ni,a, sourced(j))
-    totfeat = np.concatenate((nfeat,vmesh),axis = 1)
-    totparam  = np.array([sourced(j)(x,y) for x in range(10) for y in range(10)])
-
-    test_datalist.append(Data(x=torch.tensor(totfeat,dtype=torch.float),y=torch.tensor(totparam,dtype=torch.float),edge_index=edge_index))
-
-
-test_loader = DataLoader(test_datalist,batch_size=10,shuffle=True)
-torch.save(test_loader,'test_data.pt')
-print("Number of test samples",len(test_datalist))
-
-
-
-
-#Check's number of btches
-#for batch in train_loader:
-#    print(batch)
-
-
-"""
-
-#Load train/test data
-
-train_loader = torch.load('train_data.pt')
-test_loader = torch.load('test_data.pt')
-vad_loader = torch.load('vad_data.pt')
 
 
 # Script for training GNN 
 
 
-model = NodeClassifier(num_node_features = 3, hidden_features = 3, num_classes = 1)
+model = NodeClassifier(num_node_features = 1, hidden_features = 10, nodes = 1) #len(pygraphs[1].x))
 optimizer = torch.optim.Adam(model.parameters(),lr=0.001)
 criterion = torch.nn.MSELoss()
 model = model.float()
@@ -162,19 +103,55 @@ model = model.float()
 def train():
     loss_all = 0
     c = 0 # Counter for number of batches
-    for data in train_loader:
+    for data in trainloader:
 
         model.train()   
         optimizer.zero_grad()
-        out = model(data.x, data.edge_index)
-        print("Model output:",out.size())
-        loss = criterion( out, data.y )
+        out = model(data.x, data.edge_index,data.pos)
+
+        """
+        #Save output and FEM solver
+        np.save("GNN_output.npy",out.detach().numpy())
+        os.system("python FEM.py")
+
+    
+        with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/solution_data_OPT","rb") as fd:
+            fdata = pickle.load(fd)
+
+        with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/coordinate_data_OPT","rb") as fe:
+            coord = pickle.load(fe)
+
+        with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/input_flux_OPT","rb") as ff:
+            flux = pickle.load(ff)
+
+        FEMout = torch.tensor(np.concatenate(fdata,axis=0))# Getting solution MESH data
+        nFEMout = Variable(FEMout, requires_grad=True).to(torch.double)
+        ndata = data.x.squeeze().to(torch.double)
+        loss = criterion( nFEMout, ndata ) #Loss is between input solution mesh and output of FEM solver
         
-        loss.backward()
+
+        #Global pooling of output for graph level classification
+        out = torch.squeeze(out)
+        nout = []
+        for i in range(len(data.y)):
+            a = i*int(len(data.x)/len(data.y))
+            b = (i+1)*int(len(data.x)/len(data.y))
+        
+            nout.append(torch.mean(out[a:b]))
+
+        nnout = Variable(torch.tensor(nout, dtype=torch.double),requires_grad=True)
+        ny = data.y.to(torch.double)
+        """
+
+        nnout = out.squeeze().to(torch.double)
+        ny = data.y.to(torch.double)
+
+        loss = criterion( nnout, ny)
         loss_all += loss.item() # adds loss for each batch
+        loss.backward()
         optimizer.step()
         c = c + 1
-        sys.exit()
+   
 
     return loss_all/c # reporting average loss per batch
 
@@ -185,10 +162,34 @@ def validate():
     loss_all = 0
     c = 0 # counter for number of batches
 
-    for data in vad_loader:
+    for data in vadloader:
         model.eval()
-        out = model(data.x, data.edge_index)
-        loss = criterion(out, data.y)
+        out = model(data.x, data.edge_index,data.pos)
+
+        """
+        #Save output and FEM solver
+        np.save("GNN_output.npy",out.detach().numpy())
+        os.system("python FEM.py")
+
+        
+        with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/solution_data_OPT","rb") as fd:
+            fdata = pickle.load(fd)
+
+        with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/coordinate_data_OPT","rb") as fe:
+            coord = pickle.load(fe)
+
+        with open("/Users/oluwadamilolafasina/Inverse_GNN/FEM_output/input_flux_OPT","rb") as ff:
+            flux = pickle.load(ff)
+
+        FEMout = torch.tensor(np.concatenate(fdata,axis=0))# Getting solution MESH data
+        nFEMout = Variable(FEMout, requires_grad=True).to(torch.double)
+        ndata = data.x.squeeze().to(torch.double)
+        loss = criterion( nFEMout, ndata ) #Loss is between input solution mesh and output of FEM solver
+        """
+
+        nnout = out.squeeze().to(torch.double)
+        ny = data.y.to(torch.double)
+        loss = criterion( nnout, ny)
         loss_all += loss.item()
         c = c + 1
 
@@ -199,7 +200,7 @@ def validate():
 svad = []
 svtrain = []
 
-for epoch in range(1, 200):
+for epoch in range(1, 10):
     train_loss = train()
     validate_loss = validate()
 
@@ -207,47 +208,55 @@ for epoch in range(1, 200):
     svad.append(validate_loss)
 
     if epoch % 10 == 0: #Print every 10 epochs
-        print(f'Epoch: {epoch:03d}, Train Loss: {train_loss:.4f}, Validation Loss: {validate_loss:.4f}')
+        print( "Train Loss:",train_loss,"Validate Loss",validate_loss )
+
+        
+    #print(f'Epoch: {epoch:03d}, Train Loss: {train_loss:.4f}) #, Validation Loss: {validate_loss:.4f}')
 
 
+"""
 #Testing model with MSE
 tloss = 0
-for data in test_loader:
+for data in testloader:
 
     model.eval()
-    out = model(data.x,data.edge_index)
+    out = model(data.x,data.edge_index,data.pos)
     tloss += criterion(out,data.y)
     #print(tloss)
 
-print("Average Test Loss (MSE)",tloss/len(test_loader))
+print("Average Test Loss (MSE)",tloss/len(testloader))
+"""
 
 
 plt.figure()
-plt.title("Experiment 8")
+plt.title("Experiment 1")
 plt.plot(svtrain)
 plt.plot(svad)
 plt.yscale("log")
 plt.xlabel("Number of Epochs")
 plt.ylabel("Loss (Log-Scale)")
 plt.legend(["Train Loss","Validation Loss"])
-plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/exp/exp_8_train_vad.png")
+plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/Figures/exp_one_train_vad_3.png")
 plt.show()
 
+
+
 plt.figure()
-plt.title("Experiment 8 - Train Loss")
+plt.title("Experiment 1 - Train Loss")
 plt.plot(svtrain)
 plt.yscale("log")
 plt.xlabel("Number of Epochs")
 plt.ylabel("Loss (Log-Scale)")
-plt.legend(["Train Loss","Validation Loss"])
+plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/Figures/exp_one_train_3.png")
 plt.show()
-plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/exp/exp_8_train.png")
+
+
 
 plt.figure()
-plt.title("Experiment 8 - Validation Loss")
+plt.title("Experiment 1 - Validation Loss")
 plt.plot(svad)
 plt.yscale("log")
 plt.xlabel("Number of Epochs")
 plt.ylabel("Loss (Log-Scale)")
+plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/Figures/exp_one_vad_3.png")
 plt.show()
-plt.savefig("/Users/oluwadamilolafasina/Inverse_GNN/exp/exp_8_vad.png")
