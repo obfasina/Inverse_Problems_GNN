@@ -13,29 +13,33 @@ import matplotlib.pyplot as plt
 class SAGEConv(MessagePassing):
     def __init__(self, in_channels, out_channels):
         super(SAGEConv, self).__init__(aggr='mean') #  Specify aggregation scheme
+
+        #Aggregation function
         self.lin = torch.nn.Linear(in_channels, out_channels)
         self.act = torch.nn.ReLU()
-        self.update_lin = torch.nn.Linear(in_channels + out_channels, in_channels, bias=False)
+
+
+        #Update function
+        self.update_lin = torch.nn.Linear(in_channels + out_channels, out_channels, bias=False)
         self.update_act = torch.nn.ReLU()
         
-    def forward(self, x, edge_index):
+    def forward(self, x, edge_index,pos):
         # x has shape [N, in_channels]
         # edge_index has shape [2, E]
         
-        edge_index, _ = remove_self_loops(edge_index)
-        edge_index, _ = add_self_loops(edge_index, num_nodes=x.size(0))
+        #edge_index, _ = remove_self_loops(edge_index)
+        #edge_index, _ = add_self_loops(edge_index, num_nodes=x.size(0))
 
-        #Linear Transformation
-        x = self.lin(x)
 
         #Compute normalization.
+        #print(edge_index.size())
         row, col = edge_index
         deg = degree(col, x.size(0), dtype=x.dtype)
         deg_inv_sqrt = deg.pow(-0.5)
         norm = deg_inv_sqrt[row] * deg_inv_sqrt[col]
 
         
-        return self.propagate(edge_index, x=x, norm=norm)
+        return self.propagate(edge_index, x=x, norm=norm,pos = pos)
 
     def message(self, x_j):
         # x_j has shape [E, in_channels]
@@ -52,7 +56,6 @@ class SAGEConv(MessagePassing):
 
 
         new_embedding = torch.cat([aggr_out, x], dim=1)
-        
         new_embedding = self.update_lin(new_embedding)
         new_embedding = self.update_act(new_embedding)
         
@@ -60,27 +63,27 @@ class SAGEConv(MessagePassing):
 
 #Defining GNN
 class NodeClassifier(torch.nn.Module):
-    def __init__(self,num_node_features,hidden_features,num_classes):
+    def __init__(self,num_node_features,hidden_features,nodes):
         super(NodeClassifier,self).__init__()
 
         self.conv1 = SAGEConv(num_node_features,hidden_features)
         self.conv2 = SAGEConv(hidden_features,hidden_features)
         self.conv3 = SAGEConv(hidden_features,hidden_features)
         self.bn1 = torch.nn.BatchNorm1d(hidden_features)
-        self.lin1 = torch.nn.Linear(hidden_features,num_classes)
+        self.lin1 = torch.nn.Linear(hidden_features,nodes)
         self.act1 = torch.nn.ReLU()
 
 
-    def forward(self,x, edge_index):
+    def forward(self,x, edge_index,pos):
         
         
-        x = self.conv1(x,edge_index)
+        x = self.conv1(x,edge_index,pos)
         x = self.bn1(x)
         x = self.act1(x)
-        x = self.conv2(x,edge_index)
+        x = self.conv2(x,edge_index,pos)
         x = self.bn1(x)
         x = self.act1(x)
-        x = self.conv3(x,edge_index)
+        x = self.conv3(x,edge_index,pos)
         x = self.lin1(x)
         
 
