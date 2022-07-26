@@ -2,7 +2,7 @@
 # Script for generating synthetic PDE data
 
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 #Start with non-homogenous Poisson equation with quadratic source
 

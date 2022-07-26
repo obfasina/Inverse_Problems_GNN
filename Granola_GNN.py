@@ -5,7 +5,7 @@ from torch_geometric.data import Data
 from torch_geometric.utils import remove_self_loops, add_self_loops, degree
 from synthetic_data import datagen
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 
