@@ -7,7 +7,7 @@ c) Script that applies Geometric Scattering Transform: "apply_GS.py"
 
 Steps to run: 
 
-1) Create environment using:  "conda create --name myenv --file spec_file.txt"
+1) Create environment using:  "conda create --name myenv --file spec_file_adk.txt"
 2) Activate environment using: "conda activate myenv"
 
 All packages/depencies should be available in the specified envrionment following those two commands.
