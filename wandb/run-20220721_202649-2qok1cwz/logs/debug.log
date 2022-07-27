@@ -1,0 +1,38 @@
+2022-07-21 20:26:49,131 INFO    MainThread:1816024 [wandb_setup.py:_flush():76] Configure stats pid to 1816024
+2022-07-21 20:26:49,131 INFO    MainThread:1816024 [wandb_setup.py:_flush():76] Loading settings from /home/dami/.config/wandb/settings
+2022-07-21 20:26:49,131 INFO    MainThread:1816024 [wandb_setup.py:_flush():76] Loading settings from /home/dami/Inverse_GNN/wandb/settings
+2022-07-21 20:26:49,131 INFO    MainThread:1816024 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-07-21 20:26:49,131 INFO    MainThread:1816024 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_FEMgpuGS.py', 'program': '/home/dami/Inverse_GNN/train_FEMgpuGS.py'}
+2022-07-21 20:26:49,132 INFO    MainThread:1816024 [wandb_init.py:_log_setup():461] Logging user logs to /home/dami/Inverse_GNN/wandb/run-20220721_202649-2qok1cwz/logs/debug.log
+2022-07-21 20:26:49,132 INFO    MainThread:1816024 [wandb_init.py:_log_setup():462] Logging internal logs to /home/dami/Inverse_GNN/wandb/run-20220721_202649-2qok1cwz/logs/debug-internal.log
+2022-07-21 20:26:49,132 INFO    MainThread:1816024 [wandb_init.py:init():495] calling init triggers
+2022-07-21 20:26:49,132 INFO    MainThread:1816024 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {}
+2022-07-21 20:26:49,132 INFO    MainThread:1816024 [wandb_init.py:init():548] starting backend
+2022-07-21 20:26:49,132 INFO    MainThread:1816024 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-07-21 20:26:49,136 INFO    MainThread:1816024 [backend.py:ensure_launched():217] starting backend process...
+2022-07-21 20:26:49,137 INFO    MainThread:1816024 [backend.py:ensure_launched():222] started backend process with pid: 1816151
+2022-07-21 20:26:49,138 INFO    MainThread:1816024 [wandb_init.py:init():558] backend started and connected
+2022-07-21 20:26:49,139 INFO    MainThread:1816024 [wandb_init.py:init():634] updated telemetry
+2022-07-21 20:26:49,142 INFO    MainThread:1816024 [wandb_init.py:init():665] communicating run to backend with 30 second timeout
+2022-07-21 20:27:19,144 INFO    MainThread:1816024 [interface_shared.py:_communicate_run():326] couldn't get run from backend
+2022-07-21 20:27:19,144 ERROR   MainThread:1816024 [wandb_init.py:init():674] backend process timed out
+2022-07-21 20:27:19,144 ERROR   MainThread:1816024 [wandb_init.py:init():685] encountered error: Error communicating with wandb process
+try: wandb.init(settings=wandb.Settings(start_method='fork'))
+or:  wandb.init(settings=wandb.Settings(start_method='thread'))
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2022-07-21 20:27:30,355 WARNING MainThread:1816024 [wandb_init.py:init():1064] interrupted
+Traceback (most recent call last):
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1043, in init
+    run = wi.init()
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 689, in init
+    backend.cleanup()
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/wandb/sdk/backend/backend.py", line 248, in cleanup
+    self.wandb_process.join()
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/multiprocessing/popen_fork.py", line 43, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt

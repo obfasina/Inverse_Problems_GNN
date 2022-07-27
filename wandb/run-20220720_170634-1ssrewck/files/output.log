@@ -1,0 +1,133 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 83880.91768810601  Validation Loss: 82158.1889702295
+Epoch: 20  Train Loss: 82941.46804918455  Validation Loss: 78902.95637090804
+Epoch: 30  Train Loss: 80746.80729927337  Validation Loss: 75680.1685512191
+Epoch: 40  Train Loss: 76703.62046610787  Validation Loss: 68608.96274214878
+Epoch: 50  Train Loss: 69941.25116906018  Validation Loss: 57553.88630677491
+Epoch: 60  Train Loss: 60880.93849294453  Validation Loss: 47561.46510359695
+Epoch: 70  Train Loss: 50138.34459035174  Validation Loss: 43241.7966482833
+Epoch: 80  Train Loss: 39035.836765178676  Validation Loss: 43721.45108270434
+Epoch: 90  Train Loss: 28390.281851699354  Validation Loss: 41686.48404197581
+Epoch: 100  Train Loss: 23661.599133068215  Validation Loss: 37429.27184571332
+Epoch: 110  Train Loss: 16966.803095694948  Validation Loss: 27960.665295409166
+Epoch: 120  Train Loss: 11507.317167119414  Validation Loss: 14894.061294538935
+Epoch: 130  Train Loss: 9936.46868289115  Validation Loss: 20007.0953179089
+Epoch: 140  Train Loss: 8848.773917189596  Validation Loss: 14272.28035473991
+Epoch: 150  Train Loss: 8245.735477803633  Validation Loss: 12950.14362591114
+Epoch: 160  Train Loss: 7585.299029449491  Validation Loss: 12825.360535486463
+Epoch: 170  Train Loss: 6744.463926302327  Validation Loss: 11573.26445159372
+Epoch: 180  Train Loss: 7499.911713058086  Validation Loss: 13207.871083094044
+Epoch: 190  Train Loss: 5530.1268986084915  Validation Loss: 11441.519685995168
+Epoch: 200  Train Loss: 5324.638794284706  Validation Loss: 11833.201094256894
+Epoch: 210  Train Loss: 7493.203993882122  Validation Loss: 13343.337792532162
+Epoch: 220  Train Loss: 5777.8074852938225  Validation Loss: 11541.805511357423
+Epoch: 230  Train Loss: 5848.874126411538  Validation Loss: 9214.538208451986
+Epoch: 240  Train Loss: 5787.269059444322  Validation Loss: 8528.78901936652
+Epoch: 250  Train Loss: 5030.929145810541  Validation Loss: 7160.187708101613
+Epoch: 260  Train Loss: 5338.547838030089  Validation Loss: 11035.874666455087
+Epoch: 270  Train Loss: 5468.2507525775545  Validation Loss: 7534.580425221352
+Epoch: 280  Train Loss: 4704.806170737104  Validation Loss: 7144.170714870174
+Epoch: 290  Train Loss: 4988.652403351854  Validation Loss: 9117.344055176529
+Epoch: 300  Train Loss: 5696.618044044685  Validation Loss: 7452.327201590316
+Epoch: 310  Train Loss: 5083.244858606194  Validation Loss: 8761.562079628224
+Epoch: 320  Train Loss: 4509.094901783947  Validation Loss: 6459.6191797995325
+Epoch: 330  Train Loss: 4431.864439237911  Validation Loss: 30605.541262279854
+Epoch: 340  Train Loss: 3723.490852109331  Validation Loss: 7074.622993443892
+Epoch: 350  Train Loss: 1977.0931216979764  Validation Loss: 4922.170101700464
+Epoch: 360  Train Loss: 1958.13032975192  Validation Loss: 4341.1928633798
+Epoch: 370  Train Loss: 1550.626157947144  Validation Loss: 4080.1513779283755
+Epoch: 380  Train Loss: 1777.2080569134262  Validation Loss: 5390.265059166871
+Epoch: 390  Train Loss: 1764.4734060930286  Validation Loss: 4062.4365118341098
+Epoch: 400  Train Loss: 1670.5838412112214  Validation Loss: 3980.5323362465283
+Epoch: 410  Train Loss: 1657.8200661896183  Validation Loss: 4539.673130175838
+Epoch: 420  Train Loss: 1562.7091974242048  Validation Loss: 3763.1941988455433
+Epoch: 430  Train Loss: 1363.5792757391418  Validation Loss: 2720.9084719486546
+Epoch: 440  Train Loss: 1320.0955829182024  Validation Loss: 2925.217786044802
+Epoch: 450  Train Loss: 1300.9966437982018  Validation Loss: 5150.332285902701
+Epoch: 460  Train Loss: 987.1979224121769  Validation Loss: 2394.518325131362
+Epoch: 470  Train Loss: 1206.0906995702157  Validation Loss: 6905.085938986952
+Epoch: 480  Train Loss: 1289.2151025102958  Validation Loss: 2506.075736728285
+Epoch: 490  Train Loss: 908.0809919862824  Validation Loss: 2326.594934563598
+Epoch: 500  Train Loss: 820.3655723988695  Validation Loss: 2301.6265002240443
+Epoch: 510  Train Loss: 1256.3886541356817  Validation Loss: 2659.7718336386133
+Epoch: 520  Train Loss: 888.4059572489177  Validation Loss: 2099.7665857815387
+Epoch: 530  Train Loss: 1291.0042735928625  Validation Loss: 4063.146619695305
+Epoch: 540  Train Loss: 1167.1152344971326  Validation Loss: 2113.2502393563586
+Epoch: 550  Train Loss: 1117.659759632348  Validation Loss: 2385.0939726897677
+Epoch: 560  Train Loss: 992.1452662168425  Validation Loss: 2144.634058089166
+Epoch: 570  Train Loss: 1008.4665130129197  Validation Loss: 2233.967553655789
+Epoch: 580  Train Loss: 700.81490376774  Validation Loss: 2074.8447644767266
+Epoch: 590  Train Loss: 1036.0607331088988  Validation Loss: 2347.4158185522674
+Epoch: 600  Train Loss: 646.446360574717  Validation Loss: 2386.9013305383705
+Epoch: 610  Train Loss: 649.1652096908541  Validation Loss: 2572.7400952260264
+Epoch: 620  Train Loss: 728.1455721947619  Validation Loss: 1928.1118296110953
+Epoch: 630  Train Loss: 801.4934180275044  Validation Loss: 1920.5439199798118
+Epoch: 640  Train Loss: 646.9096561267113  Validation Loss: 2086.2697141814965
+Epoch: 650  Train Loss: 1056.5191672501674  Validation Loss: 2616.615707092441
+Epoch: 660  Train Loss: 717.5099654557899  Validation Loss: 1866.8065892916186
+Epoch: 670  Train Loss: 615.459109126371  Validation Loss: 1701.5842776021964
+Epoch: 680  Train Loss: 1017.5549345837723  Validation Loss: 2880.6693781707636
+Epoch: 690  Train Loss: 570.3767671252831  Validation Loss: 1879.6996496277302
+Epoch: 700  Train Loss: 837.7687335754567  Validation Loss: 2237.4049976602337
+tensor(196767.1693, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(179152.0723, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(201207.8082, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(233997.0000, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(224265.6801, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(196504.2620, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(214717.5608, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(212756.8086, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(221642.5134, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+Epoch: 710  Train Loss: 992.3711728774775  Validation Loss: 2016.9530264397563
+tensor(181367.5711, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(181984.5993, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(203055.1522, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(168625.7418, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(183279.5230, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(173377.7272, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(184003.3528, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(222799.4277, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(210529.1675, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(208869.3272, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(228207.3532, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(200335.3207, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+Epoch: 720  Train Loss: 1044.5768307368633  Validation Loss: 1729.8005244883673
+tensor(223773.1346, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(218870.6332, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(195666.0914, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(203979.2799, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(199671.5505, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(196890.8444, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(189680.2531, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(181871.5068, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(218827.7627, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+Epoch: 730  Train Loss: 768.1958795037814  Validation Loss: 2405.4019385201564
+tensor(196725.9394, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(203934.4520, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(185261.9631, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(174432.0568, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(206455.1921, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(225084.2907, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(185054.7928, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(212386.0908, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(177508.1761, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+Epoch: 740  Train Loss: 511.0113113945892  Validation Loss: 1874.8932994864408
+tensor(199462.3144, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(195851.0010, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(233773.5617, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(192646.5920, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(196697.4675, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(208806.4961, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(212918.3582, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(179183.5042, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(200679.0822, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(190521.8858, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(208311.3998, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(184220.3044, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+Epoch: 750  Train Loss: 529.0005602936734  Validation Loss: 2137.8259628669744
+tensor(208517.4855, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(198676.3903, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(180768.1300, dtype=torch.float64, grad_fn=<MseLossBackward0>)
+tensor(178546.5916, dtype=torch.float64, grad_fn=<MseLossBackward0>)

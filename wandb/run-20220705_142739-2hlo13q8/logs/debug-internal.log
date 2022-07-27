@@ -1,0 +1,723 @@
+2022-07-05 14:27:41,062 INFO    MainThread:54743 [internal.py:wandb_internal():90] W&B internal server running at pid: 54743, started at: 2022-07-05 14:27:41.062502
+2022-07-05 14:27:41,063 INFO    WriterThread:54743 [datastore.py:open_for_write():75] open: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/run-2hlo13q8.wandb
+2022-07-05 14:27:41,065 DEBUG   SenderThread:54743 [sender.py:send():236] send: header
+2022-07-05 14:27:41,065 DEBUG   SenderThread:54743 [sender.py:send():236] send: run
+2022-07-05 14:27:41,247 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: check_version
+2022-07-05 14:27:41,252 INFO    SenderThread:54743 [dir_watcher.py:__init__():216] watching files in: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files
+2022-07-05 14:27:41,252 INFO    SenderThread:54743 [sender.py:_start_run_threads():815] run started: 2hlo13q8 with start time 1657056459
+2022-07-05 14:27:41,253 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:41,253 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:41,253 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: check_version
+2022-07-05 14:27:41,312 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: run_start
+2022-07-05 14:27:41,314 DEBUG   HandlerThread:54743 [meta.py:__init__():35] meta init
+2022-07-05 14:27:41,314 DEBUG   HandlerThread:54743 [meta.py:__init__():49] meta init done
+2022-07-05 14:27:41,314 DEBUG   HandlerThread:54743 [meta.py:probe():209] probe
+2022-07-05 14:27:41,322 DEBUG   HandlerThread:54743 [meta.py:_setup_git():199] setup git
+2022-07-05 14:27:41,395 DEBUG   HandlerThread:54743 [meta.py:_setup_git():206] setup git done
+2022-07-05 14:27:41,395 DEBUG   HandlerThread:54743 [meta.py:_save_pip():53] save pip
+2022-07-05 14:27:41,396 DEBUG   HandlerThread:54743 [meta.py:_save_pip():67] save pip done
+2022-07-05 14:27:41,396 DEBUG   HandlerThread:54743 [meta.py:_save_conda():74] save conda
+2022-07-05 14:27:42,260 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_created():269] file/dir created: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:27:42,260 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_created():269] file/dir created: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/requirements.txt
+2022-07-05 14:27:42,260 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_created():269] file/dir created: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/conda-environment.yaml
+2022-07-05 14:27:46,849 DEBUG   HandlerThread:54743 [meta.py:_save_conda():84] save conda done
+2022-07-05 14:27:46,849 DEBUG   HandlerThread:54743 [meta.py:probe():247] probe done
+2022-07-05 14:27:46,856 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:27:46,856 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:27:47,015 DEBUG   SenderThread:54743 [sender.py:send():236] send: telemetry
+2022-07-05 14:27:47,015 DEBUG   SenderThread:54743 [sender.py:send():236] send: files
+2022-07-05 14:27:47,015 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-05 14:27:47,287 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/conda-environment.yaml
+2022-07-05 14:27:47,287 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_created():269] file/dir created: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-metadata.json
+2022-07-05 14:27:47,287 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_created():269] file/dir created: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:27:47,570 INFO    Thread-11 :54743 [upload_job.py:push():138] Uploaded file /var/folders/hg/4p3h32k539j18r1d04pf0c100000gr/T/tmpib7aw7gowandb/16uokdj7-wandb-metadata.json
+2022-07-05 14:27:49,298 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:27:50,479 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:27:50,480 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:27:50,480 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:27:50,480 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:50,482 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:50,482 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:27:50,482 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:50,485 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:51,310 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:27:54,248 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:27:54,248 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:27:54,248 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:27:54,248 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:54,249 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:54,249 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:27:54,249 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:54,252 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:54,322 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:27:57,635 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:27:57,635 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:27:57,635 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:27:57,635 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:57,636 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:57,636 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:27:57,636 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:27:57,640 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:27:58,338 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:01,031 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:01,031 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:01,031 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:01,031 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:01,032 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:01,032 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:01,032 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:01,035 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:01,353 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:02,020 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:28:02,020 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:28:04,421 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:04,421 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:04,422 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:04,422 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:04,423 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:04,423 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:04,423 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:04,426 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:05,372 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:07,879 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:07,880 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:07,880 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:07,880 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:07,881 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:07,881 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:07,881 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:07,884 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:08,389 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:10,538 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:28:11,184 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:11,185 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:11,185 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:11,387 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:11,387 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:11,387 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:11,387 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:11,391 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:11,406 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:11,406 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/config.yaml
+2022-07-05 14:28:14,544 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:14,545 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:14,545 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:14,545 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:14,545 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:14,545 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:14,545 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:14,548 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:15,424 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:17,178 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:28:17,178 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:28:18,018 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:18,019 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:18,019 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:18,019 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:18,020 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:18,020 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:18,020 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:18,024 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:18,440 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:21,313 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:21,314 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:21,314 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:21,314 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:21,315 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:21,315 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:21,315 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:21,318 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:21,452 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:22,458 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:28:24,752 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:24,753 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:24,753 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:24,753 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:24,754 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:24,754 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:24,754 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:24,758 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:25,472 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:28,130 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:28,130 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:28,131 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:28,131 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:28,131 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:28,132 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:28,132 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:28,136 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:28,488 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:31,460 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:31,460 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:31,460 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:31,460 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:31,461 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:31,461 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:31,461 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:31,464 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:31,506 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:32,339 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:28:32,339 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:28:34,815 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:34,815 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:34,815 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:34,815 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:34,816 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:34,816 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:34,816 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:34,820 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:35,529 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:38,265 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:38,265 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:38,265 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:38,265 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:38,266 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:38,266 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:38,266 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:38,269 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:38,542 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:41,860 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:28:41,865 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:41,866 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:41,866 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:41,866 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:41,866 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:41,866 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:41,866 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:41,870 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:42,561 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:45,364 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:45,364 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:45,364 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:45,364 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:45,365 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:45,365 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:45,365 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:45,369 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:45,578 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:47,497 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:28:47,497 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:28:48,718 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:48,719 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:48,719 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:48,719 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:48,720 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:48,720 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:48,721 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:48,724 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:49,599 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:52,105 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:52,105 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:52,105 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:52,105 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:52,106 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:52,106 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:52,106 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:52,109 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:52,616 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:55,530 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:55,530 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:55,530 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:55,530 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:55,531 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:55,531 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:55,531 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:55,534 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:55,632 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:28:56,638 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:28:58,894 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:58,894 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:28:58,895 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:58,895 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:58,895 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:58,896 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:28:58,896 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:28:58,899 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:28:59,655 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:02,246 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:02,247 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:02,247 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:02,247 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:02,248 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:02,248 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:02,248 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:02,252 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:02,653 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:29:02,653 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:29:02,668 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:05,583 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:05,583 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:05,584 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:05,584 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:05,584 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:05,584 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:05,584 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:05,588 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:05,685 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:08,982 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:08,982 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:08,982 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:08,982 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:08,983 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:08,983 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:08,984 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:08,987 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:09,707 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:12,433 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:12,434 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:12,434 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:12,434 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:12,435 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:12,435 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:12,435 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:12,438 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:12,724 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:13,171 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:29:15,778 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:15,778 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:15,778 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:15,778 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:15,779 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:15,779 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:15,779 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:15,783 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:16,739 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:17,806 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:29:17,806 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:29:19,106 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:19,106 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:19,106 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:19,106 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:19,107 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:19,107 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:19,107 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:19,111 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:19,755 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:22,434 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:22,434 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:22,434 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:22,434 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:22,435 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:22,435 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:22,435 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:22,439 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:22,767 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:25,776 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:25,777 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:25,777 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:25,777 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:25,777 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:25,778 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:25,778 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:25,779 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:25,781 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:26,785 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:29,148 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:29,149 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:29,149 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:29,149 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:29,150 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:29,150 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:29,150 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:29,153 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:29,805 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:30,814 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:29:32,498 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:32,498 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:32,499 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:32,499 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:32,499 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:32,499 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:32,499 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:32,503 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:32,830 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:32,985 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:29:32,985 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:29:35,828 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:35,828 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:35,828 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:35,828 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:35,829 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:35,829 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:35,829 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:35,833 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:35,853 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:39,145 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:39,145 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:39,145 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:39,145 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:39,146 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:39,146 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:39,146 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:39,150 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:39,880 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:42,479 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:42,479 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:42,480 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:42,480 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:42,481 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:42,481 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:42,481 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:42,485 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:42,894 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:44,523 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:29:45,818 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:45,818 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:45,818 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:45,818 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:45,819 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:45,819 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:45,819 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:45,823 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:45,909 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:48,160 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:29:48,160 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:29:49,282 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:49,282 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:49,282 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:49,282 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:49,283 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:49,283 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:49,283 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:49,287 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:49,934 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:52,607 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:52,607 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:52,608 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:52,608 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:52,609 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:52,609 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:52,609 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:52,613 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:52,953 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:55,951 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:55,951 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:55,951 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:55,951 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:55,952 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:55,952 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:55,952 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:55,956 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:55,970 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:29:59,260 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:59,260 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:29:59,261 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:59,261 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:59,261 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:59,261 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:29:59,261 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:29:59,265 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:29:59,991 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:02,567 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:02,568 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:02,568 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:02,568 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:02,569 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:02,569 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:02,569 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:02,572 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:03,005 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:03,323 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:30:03,323 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:30:05,013 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:30:05,969 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:05,970 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:05,970 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:05,970 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:05,971 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:05,971 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:05,971 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:05,974 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:06,019 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:09,336 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:09,336 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:09,336 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:09,336 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:09,337 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:09,337 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:09,337 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:09,341 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:10,040 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:12,668 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:12,668 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:12,669 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:12,669 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:12,669 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:12,669 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:12,669 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:12,674 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:13,058 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:15,852 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:30:16,062 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:16,062 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:16,063 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:16,063 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:16,063 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:16,063 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:16,064 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:16,067 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:16,073 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:18,477 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:30:18,477 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:30:19,384 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:19,384 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:19,384 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:19,385 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:19,385 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:19,385 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:19,385 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:19,390 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:20,089 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:22,702 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:22,703 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:22,703 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:22,703 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:22,704 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:22,704 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:22,704 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:22,708 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:23,105 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:26,020 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:26,020 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:26,020 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:26,020 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:26,021 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:26,021 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:26,021 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:26,025 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:26,115 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:29,317 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:29,317 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:29,318 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:29,318 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:29,318 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:29,318 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:29,319 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:29,323 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:30,135 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:32,595 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:32,595 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:32,595 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:32,595 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:32,596 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:32,596 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:32,596 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:32,600 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:33,151 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:33,643 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:30:33,643 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:30:35,891 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:35,891 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:35,891 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:35,891 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:35,892 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:35,892 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:35,892 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:35,896 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:36,167 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:37,173 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:30:39,291 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:39,291 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:39,292 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:39,292 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:39,292 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:39,293 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:39,293 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:39,296 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:40,184 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:42,643 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:42,643 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:42,643 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:42,643 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:42,644 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:42,644 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:42,644 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:42,648 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:43,200 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:45,955 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:45,956 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:45,956 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:45,956 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:45,956 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:45,957 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:45,957 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:45,960 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:46,216 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:47,171 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:30:48,799 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:30:48,799 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:30:49,485 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:49,485 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:49,485 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:49,486 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:49,486 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:49,486 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:49,486 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:49,489 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:50,237 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:52,929 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:52,929 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:52,929 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:52,929 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:52,930 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:52,930 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:52,930 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:52,934 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:53,253 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:56,286 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:56,287 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:56,287 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:56,287 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:56,287 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:56,287 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:56,288 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:56,292 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:57,276 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:30:59,592 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:59,593 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:30:59,593 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:59,593 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:59,594 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:30:59,594 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:30:59,594 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:30:59,598 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:00,289 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:02,948 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:02,948 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:02,948 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:02,949 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:02,949 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:02,949 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:02,949 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:02,952 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:03,305 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:03,950 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:31:03,951 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:31:06,323 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:06,324 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:06,324 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:06,324 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:06,324 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:06,324 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:06,324 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:06,327 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:07,328 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:09,712 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:09,712 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:09,712 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:09,713 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:09,713 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:09,714 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:09,714 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:09,718 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:10,345 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:11,351 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:31:13,041 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:13,041 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:13,041 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:13,041 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:13,042 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:13,042 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:13,042 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:13,046 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:13,363 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:16,519 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:16,519 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:16,519 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:16,519 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:16,520 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:16,520 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:16,520 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:16,524 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:17,384 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:18,491 DEBUG   SenderThread:54743 [sender.py:send():236] send: stats
+2022-07-05 14:31:19,111 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:31:19,111 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:31:19,903 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:19,903 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:19,903 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:19,903 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:19,904 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:19,905 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:19,905 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:19,908 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:20,396 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:23,238 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:23,238 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:23,239 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:23,239 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:23,239 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:23,239 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:23,239 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:23,244 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:23,412 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:26,697 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:26,697 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:26,697 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:26,697 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:26,698 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:26,698 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:26,698 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:26,701 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:27,428 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:30,159 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:30,160 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:30,160 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:30,160 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:30,161 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:30,161 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:30,161 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:30,164 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:30,445 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:33,575 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:33,575 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:33,576 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:33,576 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:33,576 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:33,576 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:33,576 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:33,580 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:34,266 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-05 14:31:34,266 DEBUG   SenderThread:54743 [sender.py:send_request():250] send_request: stop_status
+2022-07-05 14:31:34,459 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:36,999 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:36,999 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:36,999 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:36,999 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:37,000 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:37,000 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:37,000 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:37,004 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:37,474 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:40,456 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:40,457 DEBUG   HandlerThread:54743 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-05 14:31:40,457 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:40,457 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:40,458 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:40,458 DEBUG   SenderThread:54743 [sender.py:send():236] send: history
+2022-07-05 14:31:40,458 DEBUG   SenderThread:54743 [sender.py:send():236] send: summary
+2022-07-05 14:31:40,462 INFO    SenderThread:54743 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-05 14:31:40,489 INFO    Thread-7  :54743 [dir_watcher.py:_on_file_modified():286] file/dir modified: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:41,693 WARNING MainThread:54743 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-07-05 14:31:41,764 DEBUG   SenderThread:54743 [sender.py:send():236] send: telemetry
+2022-07-05 14:31:42,706 WARNING MainThread:54743 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-07-05 14:31:42,707 ERROR   MainThread:54743 [internal.py:wandb_internal():156] Internal process interrupted.
+2022-07-05 14:31:42,764 INFO    HandlerThread:54743 [handler.py:finish():806] shutting down handler
+2022-07-05 14:31:42,769 INFO    WriterThread:54743 [datastore.py:close():279] close: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/run-2hlo13q8.wandb
+2022-07-05 14:31:42,770 INFO    SenderThread:54743 [sender.py:finish():1114] shutting down sender
+2022-07-05 14:31:42,770 INFO    SenderThread:54743 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-07-05 14:31:43,505 INFO    SenderThread:54743 [dir_watcher.py:finish():383] scan: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files
+2022-07-05 14:31:43,506 INFO    SenderThread:54743 [dir_watcher.py:finish():397] scan save: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/requirements.txt requirements.txt
+2022-07-05 14:31:43,506 INFO    SenderThread:54743 [dir_watcher.py:finish():397] scan save: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log output.log
+2022-07-05 14:31:43,512 INFO    SenderThread:54743 [dir_watcher.py:finish():397] scan save: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/config.yaml config.yaml
+2022-07-05 14:31:43,513 INFO    SenderThread:54743 [dir_watcher.py:finish():397] scan save: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json wandb-summary.json
+2022-07-05 14:31:43,517 INFO    SenderThread:54743 [dir_watcher.py:finish():397] scan save: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/conda-environment.yaml conda-environment.yaml
+2022-07-05 14:31:43,521 INFO    SenderThread:54743 [dir_watcher.py:finish():397] scan save: /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-metadata.json wandb-metadata.json
+2022-07-05 14:31:43,522 INFO    SenderThread:54743 [file_pusher.py:finish():171] shutting down file pusher
+2022-07-05 14:31:43,525 INFO    SenderThread:54743 [file_pusher.py:join():176] waiting for file pusher
+2022-07-05 14:31:44,139 INFO    Thread-15 :54743 [upload_job.py:push():138] Uploaded file /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/wandb-summary.json
+2022-07-05 14:31:44,140 INFO    Thread-14 :54743 [upload_job.py:push():138] Uploaded file /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/config.yaml
+2022-07-05 14:31:44,142 INFO    Thread-12 :54743 [upload_job.py:push():138] Uploaded file /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/requirements.txt
+2022-07-05 14:31:44,144 INFO    Thread-16 :54743 [upload_job.py:push():138] Uploaded file /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/conda-environment.yaml
+2022-07-05 14:31:44,145 INFO    Thread-13 :54743 [upload_job.py:push():138] Uploaded file /Users/oluwadamilolafasina/Inverse_GNN/wandb/run-20220705_142739-2hlo13q8/files/output.log
+2022-07-05 14:31:44,919 INFO    MainThread:54743 [internal.py:handle_exit():80] Internal process exited

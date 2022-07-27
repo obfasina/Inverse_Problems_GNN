@@ -1,0 +1,29 @@
+Time to play:
+Loading lists of data
+Train Loss: 326601.42161187174 Validate Loss 334610.8373075295
+Train Loss: 320313.2975355823 Validate Loss 327716.96205875307
+Train Loss: 290373.04196953244 Validate Loss 275316.1947958311
+Train Loss: 215811.98960113488 Validate Loss 164387.20033826953
+Train Loss: 119415.16121501425 Validate Loss 49638.405494287435
+Train Loss: 52864.836658758 Validate Loss 49229.73288643115
+Train Loss: 32311.677129242278 Validate Loss 76313.89928630347
+Train Loss: 26933.344239385937 Validate Loss 234790.29949608282
+Train Loss: 27491.315762241193 Validate Loss 107480.57084636315
+Train Loss: 26129.95554774343 Validate Loss 320870.1701592418
+Train Loss: 27118.025337085444 Validate Loss 208192.85696397274
+Train Loss: 25862.632135339543 Validate Loss 66655.21027004418
+Train Loss: 25343.58845530256 Validate Loss 339652.29610114614
+Traceback (most recent call last):
+  File "/Users/oluwadamilolafasina/Inverse_GNN/train_FEM.py", line 206, in <module>
+    train_loss = train()
+  File "/Users/oluwadamilolafasina/Inverse_GNN/train_FEM.py", line 112, in train
+    out = model(data.x, data.edge_index,data.pos)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oluwadamilolafasina/Inverse_GNN/Granola_GNN.py", line 86, in forward
+    x = self.conv3(x,edge_index,pos)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oluwadamilolafasina/Inverse_GNN/Granola_GNN.py", line 39, in forward
+    norm = deg_inv_sqrt[row] * deg_inv_sqrt[col]
+KeyboardInterrupt

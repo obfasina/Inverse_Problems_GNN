@@ -1,0 +1,10 @@
+2022-07-19 00:42:31,110 INFO    MainThread:1377506 [internal.py:wandb_internal():90] W&B internal server running at pid: 1377506, started at: 2022-07-19 00:42:31.110749
+2022-07-19 00:42:31,112 INFO    WriterThread:1377506 [datastore.py:open_for_write():75] open: /home/dami/Inverse_GNN/wandb/run-20220719_004230-d93rm2su/run-d93rm2su.wandb
+2022-07-19 00:42:31,113 DEBUG   SenderThread:1377506 [sender.py:send():236] send: header
+2022-07-19 00:42:31,113 DEBUG   SenderThread:1377506 [sender.py:send():236] send: run
+2022-07-19 00:43:00,581 WARNING MainThread:1377506 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-07-19 00:43:01,092 WARNING MainThread:1377506 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-07-19 00:43:01,093 ERROR   MainThread:1377506 [internal.py:wandb_internal():156] Internal process interrupted.
+2022-07-19 00:43:01,137 INFO    WriterThread:1377506 [datastore.py:close():279] close: /home/dami/Inverse_GNN/wandb/run-20220719_004230-d93rm2su/run-d93rm2su.wandb
+2022-07-19 00:43:01,161 INFO    HandlerThread:1377506 [handler.py:finish():806] shutting down handler
+2022-07-19 00:43:01,163 INFO    MainThread:1377506 [internal.py:handle_exit():80] Internal process exited

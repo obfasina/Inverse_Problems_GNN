@@ -1,0 +1,4 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[2345, 1], edge_index=[2, 9380], y=[2345], pos=[2345, 2])
+Train Loss: 325094.41799723153 Validate Loss 328781.50300906715

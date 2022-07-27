@@ -1,0 +1,6 @@
+Time to play:
+Loading lists of data
+GST (500, 81, 31)
+graph data Data(x=[81, 31], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 84938.88756640129  Validation Loss: 69892.45755750441
+Epoch: 20  Train Loss: 83594.08955441453  Validation Loss: 68377.15813119615

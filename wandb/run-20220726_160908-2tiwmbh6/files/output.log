@@ -1,0 +1,23 @@
+Time to play:
+Loading lists of data
+GST (500, 81, 31)
+graph data Data(x=[81, 31], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 84893.43022794266  Validation Loss: 69817.73927844065
+Epoch: 20  Train Loss: 83479.67814899776  Validation Loss: 68264.89239574829
+Epoch: 30  Train Loss: 80241.23098606268  Validation Loss: 65550.66349705876
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/train_FEMgpuGS.py", line 286, in <module>
+    validate_loss = validate(fopt,epoch,lamda)
+  File "/home/dami/Inverse_GNN/train_FEMgpuGS.py", line 233, in validate
+    out = model(data.x, data.edge_index,data.pos)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 80, in forward
+    x = self.conv1(x,edge_index,pos)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 42, in forward
+    return self.propagate(edge_index, x=x, norm=norm,pos = pos)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py", line 351, in propagate
+    out = self.update(out, **update_kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 59, in update

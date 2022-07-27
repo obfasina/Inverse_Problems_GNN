@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.13.0-48-generic-x86_64-with-glibc2.31",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-07-21T03:56:22.106785",
+    "startedAt": "2022-07-21T03:56:21.603306",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 2,
+    "cpu_count": 128,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/dami/Inverse_GNN/train_FEMgpu.py",
+    "codePath": "train_FEMgpu.py",
+    "git": {
+        "remote": "https://github.com/obfasina/Inverse_Problems_GNN.git",
+        "commit": "c3990518ee444229924d7b8f77ab663672358349"
+    },
+    "email": null,
+    "root": "/home/dami/Inverse_GNN",
+    "host": "aditik",
+    "username": "dami",
+    "executable": "/home/dami/anaconda3/envs/fenics_d/bin/python"
+}

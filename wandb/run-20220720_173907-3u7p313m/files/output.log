@@ -1,0 +1,79 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 83730.65825527813  Validation Loss: 81779.77563502073
+Epoch: 20  Train Loss: 82582.10667594768  Validation Loss: 78969.86211850429
+Epoch: 30  Train Loss: 80061.61049757816  Validation Loss: 73605.27370393177
+Epoch: 40  Train Loss: 75298.58649654308  Validation Loss: 67750.77681145129
+Epoch: 50  Train Loss: 67868.30262016422  Validation Loss: 57333.15713654013
+Epoch: 60  Train Loss: 57813.68499041194  Validation Loss: 48363.734569122294
+Epoch: 70  Train Loss: 45982.032328059744  Validation Loss: 43986.94765214084
+Epoch: 80  Train Loss: 34223.78764944964  Validation Loss: 44480.65889921609
+Epoch: 90  Train Loss: 23324.020663038686  Validation Loss: 46674.70166230966
+Epoch: 100  Train Loss: 15200.360227744794  Validation Loss: 43848.01975460445
+Epoch: 110  Train Loss: 8392.220554599508  Validation Loss: 37916.892934574826
+Epoch: 120  Train Loss: 4741.299066953303  Validation Loss: 37121.15911684751
+Epoch: 130  Train Loss: 2474.2266978494295  Validation Loss: 33599.9551515154
+Epoch: 140  Train Loss: 1810.4376816095653  Validation Loss: 32053.626181707707
+Epoch: 150  Train Loss: 1533.2813564917842  Validation Loss: 29873.97325116542
+Epoch: 160  Train Loss: 1458.9518148081552  Validation Loss: 32076.306728759922
+Epoch: 170  Train Loss: 1574.7512513734018  Validation Loss: 29292.586656669413
+Epoch: 180  Train Loss: 1567.8697858527728  Validation Loss: 26515.414198856877
+Epoch: 190  Train Loss: 1821.132509569713  Validation Loss: 32029.547227666888
+Epoch: 200  Train Loss: 1236.494095544714  Validation Loss: 25115.573450480315
+Epoch: 210  Train Loss: 1254.3303005658108  Validation Loss: 25477.983984535596
+Epoch: 220  Train Loss: 1424.9563549386028  Validation Loss: 23685.6672211668
+Epoch: 230  Train Loss: 1501.7041618748087  Validation Loss: 22356.13173454225
+Epoch: 240  Train Loss: 1960.8009686445118  Validation Loss: 22593.595236075736
+Epoch: 250  Train Loss: 2216.246709506938  Validation Loss: 23608.520814721098
+Epoch: 260  Train Loss: 1706.882962869054  Validation Loss: 19402.89532225217
+Epoch: 270  Train Loss: 1677.7552516854312  Validation Loss: 16596.295380817293
+Epoch: 280  Train Loss: 3234.2665490039976  Validation Loss: 21158.312069633914
+Epoch: 290  Train Loss: 1656.5977382933863  Validation Loss: 16269.35336135793
+Epoch: 300  Train Loss: 2082.9677781688574  Validation Loss: 12700.333377388606
+Epoch: 310  Train Loss: 2125.61429389197  Validation Loss: 15463.417003519193
+Epoch: 320  Train Loss: 2079.1467549869667  Validation Loss: 13928.018415300128
+Epoch: 330  Train Loss: 2470.7198897265885  Validation Loss: 17745.891436258924
+Epoch: 340  Train Loss: 1642.126568464763  Validation Loss: 15520.170357297475
+Epoch: 350  Train Loss: 2858.2222599454994  Validation Loss: 17391.238433754967
+Epoch: 360  Train Loss: 2040.5788971106779  Validation Loss: 22062.49938448605
+Epoch: 370  Train Loss: 1257.5659464909177  Validation Loss: 17305.817379808228
+Epoch: 380  Train Loss: 1169.9002701497338  Validation Loss: 15141.730024869206
+Epoch: 390  Train Loss: 1822.1755152594585  Validation Loss: 10919.46305028699
+Epoch: 400  Train Loss: 1347.160285160048  Validation Loss: 10785.511458635488
+Epoch: 410  Train Loss: 2179.96595194087  Validation Loss: 16657.203891026296
+Epoch: 420  Train Loss: 1428.003353385781  Validation Loss: 9024.376582560923
+Epoch: 430  Train Loss: 1133.0723155434673  Validation Loss: 9284.175083376187
+Epoch: 440  Train Loss: 1114.250302035873  Validation Loss: 8703.647386094037
+Epoch: 450  Train Loss: 1092.179741896499  Validation Loss: 9236.954333141928
+Epoch: 460  Train Loss: 839.2825502667165  Validation Loss: 13921.062875549542
+Epoch: 470  Train Loss: 841.9465460633972  Validation Loss: 7984.828437153079
+Epoch: 480  Train Loss: 2210.4394800575396  Validation Loss: 14540.17033544419
+Epoch: 490  Train Loss: 2814.760627308642  Validation Loss: 8481.709435648647
+Epoch: 500  Train Loss: 2270.3039442638915  Validation Loss: 17442.988317012176
+Epoch: 510  Train Loss: 1332.5590884723135  Validation Loss: 14527.853736033856
+Epoch: 520  Train Loss: 1265.4837964139933  Validation Loss: 12875.534726318718
+Epoch: 530  Train Loss: 926.720281387131  Validation Loss: 11620.661012693397
+Epoch: 540  Train Loss: 1097.875709974612  Validation Loss: 9369.00177879318
+Epoch: 550  Train Loss: 1212.5467091135563  Validation Loss: 7880.286555564781
+Epoch: 560  Train Loss: 1030.3261881300964  Validation Loss: 7483.943667379171
+Epoch: 570  Train Loss: 793.0217038789265  Validation Loss: 7017.504030652174
+Epoch: 580  Train Loss: 898.9720311230735  Validation Loss: 6657.5949442609135
+Epoch: 590  Train Loss: 778.7670982371232  Validation Loss: 6230.1003109438425
+Epoch: 600  Train Loss: 825.7296591299931  Validation Loss: 6273.44373216607
+Epoch: 610  Train Loss: 570.4850401778095  Validation Loss: 5152.347640310337
+Epoch: 620  Train Loss: 626.4716048244272  Validation Loss: 5066.571397692215
+Epoch: 630  Train Loss: 918.4231602149703  Validation Loss: 4277.192190648187
+Epoch: 640  Train Loss: 548.782133546608  Validation Loss: 4052.6730784912916
+Epoch: 650  Train Loss: 576.8043021994491  Validation Loss: 3754.073846598942
+Epoch: 660  Train Loss: 602.8810327839816  Validation Loss: 3530.782035105746
+Epoch: 670  Train Loss: 970.7983271757065  Validation Loss: 4527.447386129966
+Epoch: 680  Train Loss: 810.2485067222568  Validation Loss: 4016.9345109796222
+Epoch: 690  Train Loss: 648.3980339890127  Validation Loss: 3555.167556111211
+Epoch: 700  Train Loss: 769.8560279391437  Validation Loss: 3314.8590575380563
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 243, in <module>
+    train_loss = train(fopt,epoch,lamda)
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 140, in train
+    lamda = lamda + .0001
+UnboundLocalError: local variable 'lamda' referenced before assignment

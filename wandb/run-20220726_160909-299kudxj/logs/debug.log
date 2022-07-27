@@ -1,0 +1,13 @@
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_setup.py:_flush():76] Configure stats pid to 1851973
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_setup.py:_flush():76] Loading settings from /home/dami/.config/wandb/settings
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_setup.py:_flush():76] Loading settings from /home/dami/Inverse_GNN/wandb/settings
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_FEMgpuGS.py', 'program': '/home/dami/Inverse_GNN/train_FEMgpuGS.py'}
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_init.py:_log_setup():461] Logging user logs to /home/dami/Inverse_GNN/wandb/run-20220726_160909-299kudxj/logs/debug.log
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_init.py:_log_setup():462] Logging internal logs to /home/dami/Inverse_GNN/wandb/run-20220726_160909-299kudxj/logs/debug-internal.log
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_init.py:init():495] calling init triggers
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {}
+2022-07-26 16:09:09,075 INFO    MainThread:1851973 [wandb_init.py:init():543] wandb.init() called when a run is still active
+2022-07-26 16:09:12,643 INFO    MainThread:1851973 [wandb_run.py:_atexit_cleanup():1862] got exitcode: 255
+2022-07-26 16:09:12,643 INFO    MainThread:1851973 [wandb_run.py:_restore():1834] restore

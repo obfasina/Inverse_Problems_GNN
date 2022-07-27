@@ -1,0 +1,26 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[2345, 1], edge_index=[2, 9380], y=[2345], pos=[2345, 2])
+/home/dami/anaconda3/envs/torch-fenics/lib/python3.10/site-packages/torch/cuda/__init__.py:146: UserWarning:
+NVIDIA GeForce RTX 3090 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the NVIDIA GeForce RTX 3090 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 214, in <module>
+    train_loss = train()
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 115, in train
+    out = model(data.x, data.edge_index,data.pos)
+  File "/home/dami/anaconda3/envs/torch-fenics/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 80, in forward
+    x = self.conv1(x,edge_index,pos)
+  File "/home/dami/anaconda3/envs/torch-fenics/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 37, in forward
+    deg = degree(col, x.size(0), dtype=x.dtype)
+  File "/home/dami/anaconda3/envs/torch-fenics/lib/python3.10/site-packages/torch_geometric/utils/degree.py", line 23, in degree
+    out = torch.zeros((N, ), dtype=dtype, device=index.device)
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 248, in <module>
+    train_loss = train(fopt,epoch,lamda)
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 136, in train
+    out = model(data.x, data.edge_index,data.pos)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 80, in forward
+    x = self.conv1(x,edge_index,pos)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 42, in forward
+    return self.propagate(edge_index, x=x, norm=norm,pos = pos)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py", line 317, in propagate
+    out = self.message(**msg_kwargs)
+  File "/home/dami/Inverse_GNN/Granola_GNN.py", line 49, in message
+    x_j = self.lin(x_j)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (32400x31 and 1x128)
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 31], edge_index=[2, 324], y=[81], pos=[81, 2])

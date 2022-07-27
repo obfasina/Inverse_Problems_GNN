@@ -1,0 +1,8 @@
+Time to play:
+Loading lists of data
+(1, 500, 81)
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/apply_GS.py", line 24, in <module>
+    FEMout = np.expand_dims((fdata,1))
+  File "<__array_function__ internals>", line 179, in expand_dims
+TypeError: _expand_dims_dispatcher() missing 1 required positional argument: 'axis'

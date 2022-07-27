@@ -1,0 +1,9 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 83883.55078726065  Validation Loss: 81846.61329749213
+torch.Size([8100])
+torch.Size([8100])
+100
+100
+Average Test Loss (MSE) tensor(75753.0391, device='cuda:0', grad_fn=<DivBackward0>)

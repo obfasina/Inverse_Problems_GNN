@@ -1,0 +1,11 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+(100, 1, 81)
+(81, 2)
+(100, 3, 81)
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/apply_GS.py", line 30, in <module>
+    nmat[i,:,:] = np.concatenate((FEMout[i,:,:].squeeze(0),coord.T),axis=0)
+  File "<__array_function__ internals>", line 180, in concatenate
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 1 dimension(s) and the array at index 1 has 2 dimension(s)

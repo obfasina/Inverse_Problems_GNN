@@ -1,0 +1,10 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/apply_GS.py", line 49, in <module>
+    transformedgraph = GS.computeTransform(nmat[0,:,:]) #output is (batch size x features x (scales * moments))
+  File "/home/dami/Inverse_GNN/GStransforms/Modules/graphScattering.py", line 598, in computeTransform
+    assert len(x.shape) == 3
+AssertionError
+(81, 81)

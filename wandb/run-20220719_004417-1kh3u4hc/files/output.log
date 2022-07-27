@@ -1,0 +1,11 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+<class 'numpy.float32'>
+torch.Size([100, 1])
+torch.Size([100, 1])
+<class 'numpy.float32'>
+torch.Size([100, 1])
+torch.Size([100, 1])
+<class 'numpy.float32'>
+torch.Size([100, 1])

@@ -1,0 +1,22 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-07-05T21:27:41.314149",
+    "startedAt": "2022-07-05T21:27:39.244251",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/oluwadamilolafasina/Inverse_GNN/train_FEM.py",
+    "codePath": "train_FEM.py",
+    "git": {
+        "remote": "https://github.com/obfasina/Inverse_Problems_GNN.git",
+        "commit": "c3990518ee444229924d7b8f77ab663672358349"
+    },
+    "email": "dami.fasina@yale.edu",
+    "root": "/Users/oluwadamilolafasina/Inverse_GNN",
+    "host": "cs-it-8058169",
+    "username": "oluwadamilolafasina",
+    "executable": "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/bin/python"
+}

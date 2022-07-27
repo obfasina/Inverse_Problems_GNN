@@ -1,0 +1,8 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+(81, 81)
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/apply_GS.py", line 49, in <module>
+    transformedgraph = GS.computeTransform(nmat[0,:,:].expand_dims(0)) #output is (batch size x features x (scales * moments))
+AttributeError: 'numpy.ndarray' object has no attribute 'expand_dims'

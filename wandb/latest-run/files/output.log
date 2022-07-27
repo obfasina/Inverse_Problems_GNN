@@ -1,0 +1,65 @@
+Time to play:
+Loading lists of data
+Train Loss: 253686.5710404844 Validate Loss 277412.7477428254
+Train Loss: 35429.9052167031 Validate Loss 100120.6644520958
+Train Loss: 36590.1118018117 Validate Loss 163175.83179699702
+Train Loss: 35970.87557930401 Validate Loss 128556.00936723113
+Train Loss: 35296.81638561683 Validate Loss 125084.58198015671
+Train Loss: 34656.86282960696 Validate Loss 109858.79436302616
+Train Loss: 33182.97003020976 Validate Loss 120652.60887486975
+Train Loss: 33086.81963625743 Validate Loss 99333.31239954656
+Train Loss: 36045.91371532023 Validate Loss 93403.9725425085
+Train Loss: 44185.21305175473 Validate Loss 68444.62625361673
+Train Loss: 33181.790848087876 Validate Loss 115982.37011384859
+Train Loss: 27725.51536473272 Validate Loss 83066.5322020816
+[E thread_pool.cpp:113] Exception in thread pool task: mutex lock failed: Invalid argument
+Train Loss: 25623.11126959283 Validate Loss 178154.63977894897
+Train Loss: 27442.07016883439 Validate Loss 81829.46165169065
+Train Loss: 25291.121931718466 Validate Loss 75039.28911050525
+Train Loss: 27885.02430204689 Validate Loss 292444.9424753258
+Train Loss: 24824.72931249421 Validate Loss 407747.7003084943
+Train Loss: 24178.194646840675 Validate Loss 631114.2303979808
+Train Loss: 24513.054496432273 Validate Loss 415218.75370429584
+Train Loss: 24328.164981604023 Validate Loss 671857.6121015962
+Train Loss: 30490.941367068273 Validate Loss 1092433.7418008584
+Train Loss: 32284.16282380891 Validate Loss 1116626.2540718906
+Train Loss: 30987.612449015556 Validate Loss 1261598.007606756
+Train Loss: 31274.194299668572 Validate Loss 1219993.668762795
+Train Loss: 31007.20496920645 Validate Loss 1353941.6194990452
+Train Loss: 30490.67432797066 Validate Loss 1415752.6626002854
+Train Loss: 31860.074659188394 Validate Loss 1640625.5534778372
+Train Loss: 30723.489616264298 Validate Loss 1445605.6653555683
+Train Loss: 32241.85329484474 Validate Loss 680857.6770246425
+Train Loss: 31713.566267890918 Validate Loss 494262.8782223654
+Train Loss: 32331.23023249319 Validate Loss 113926.4024794786
+Train Loss: 33031.938417451755 Validate Loss 59271.471354575755
+Train Loss: 32476.236869813092 Validate Loss 64448.06437809121
+Train Loss: 33059.79600868162 Validate Loss 63666.10197065426
+Train Loss: 32080.420968343096 Validate Loss 107363.14533776799
+Train Loss: 31629.209917299264 Validate Loss 447090.44378130126
+Train Loss: 31998.191908633216 Validate Loss 749535.4814396175
+Train Loss: 32747.837498981182 Validate Loss 648962.018266866
+Train Loss: 33246.04332977662 Validate Loss 571622.4671737094
+Train Loss: 32118.830240517622 Validate Loss 653540.0704056184
+Train Loss: 31764.556801842526 Validate Loss 1394899.1289138328
+Traceback (most recent call last):
+  File "/Users/oluwadamilolafasina/Inverse_GNN/train_FEM.py", line 208, in <module>
+    train_loss = train()
+  File "/Users/oluwadamilolafasina/Inverse_GNN/train_FEM.py", line 113, in train
+    out = model(data.x, data.edge_index,data.pos)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oluwadamilolafasina/Inverse_GNN/Granola_GNN.py", line 83, in forward
+    x = self.conv2(x,edge_index,pos)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oluwadamilolafasina/Inverse_GNN/Granola_GNN.py", line 42, in forward
+    return self.propagate(edge_index, x=x, norm=norm,pos = pos)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch_geometric/nn/conv/message_passing.py", line 317, in propagate
+    out = self.message(**msg_kwargs)
+  File "/Users/oluwadamilolafasina/Inverse_GNN/Granola_GNN.py", line 49, in message
+    x_j = self.lin(x_j)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)

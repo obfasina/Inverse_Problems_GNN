@@ -1,0 +1,157 @@
+2022-07-21 19:21:18,415 INFO    MainThread:1788089 [internal.py:wandb_internal():90] W&B internal server running at pid: 1788089, started at: 2022-07-21 19:21:18.415591
+2022-07-21 19:21:18,418 INFO    WriterThread:1788089 [datastore.py:open_for_write():75] open: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/run-1f3r0k44.wandb
+2022-07-21 19:21:18,419 DEBUG   SenderThread:1788089 [sender.py:send():236] send: header
+2022-07-21 19:21:18,419 DEBUG   SenderThread:1788089 [sender.py:send():236] send: run
+2022-07-21 19:21:18,612 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: check_version
+2022-07-21 19:21:18,617 INFO    SenderThread:1788089 [dir_watcher.py:__init__():216] watching files in: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files
+2022-07-21 19:21:18,617 INFO    SenderThread:1788089 [sender.py:_start_run_threads():815] run started: 1f3r0k44 with start time 1658456478
+2022-07-21 19:21:18,617 DEBUG   SenderThread:1788089 [sender.py:send():236] send: summary
+2022-07-21 19:21:18,617 INFO    SenderThread:1788089 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-21 19:21:18,617 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: check_version
+2022-07-21 19:21:18,644 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: run_start
+2022-07-21 19:21:18,647 DEBUG   HandlerThread:1788089 [meta.py:__init__():35] meta init
+2022-07-21 19:21:18,647 DEBUG   HandlerThread:1788089 [meta.py:__init__():49] meta init done
+2022-07-21 19:21:18,647 DEBUG   HandlerThread:1788089 [meta.py:probe():209] probe
+2022-07-21 19:21:18,653 DEBUG   HandlerThread:1788089 [meta.py:_setup_git():199] setup git
+2022-07-21 19:21:18,658 DEBUG   HandlerThread:1788089 [meta.py:_setup_git():206] setup git done
+2022-07-21 19:21:18,658 DEBUG   HandlerThread:1788089 [meta.py:_save_pip():53] save pip
+2022-07-21 19:21:18,658 DEBUG   HandlerThread:1788089 [meta.py:_save_pip():67] save pip done
+2022-07-21 19:21:18,658 DEBUG   HandlerThread:1788089 [meta.py:_save_conda():74] save conda
+2022-07-21 19:21:18,659 ERROR   HandlerThread:1788089 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/wandb/sdk/internal/meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/subprocess.py", line 1842, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2022-07-21 19:21:18,659 DEBUG   HandlerThread:1788089 [meta.py:_save_conda():84] save conda done
+2022-07-21 19:21:18,659 DEBUG   HandlerThread:1788089 [meta.py:probe():247] probe done
+2022-07-21 19:21:18,661 DEBUG   SenderThread:1788089 [sender.py:send():236] send: files
+2022-07-21 19:21:18,662 INFO    SenderThread:1788089 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-21 19:21:18,666 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-21 19:21:18,666 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: stop_status
+2022-07-21 19:21:18,795 DEBUG   SenderThread:1788089 [sender.py:send():236] send: telemetry
+2022-07-21 19:21:19,121 INFO    Thread-11 :1788089 [upload_job.py:push():138] Uploaded file /tmp/tmpxppba40twandb/gacql4fk-wandb-metadata.json
+2022-07-21 19:21:19,280 DEBUG   SenderThread:1788089 [sender.py:send():236] send: telemetry
+2022-07-21 19:21:19,619 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_created():269] file/dir created: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/wandb-metadata.json
+2022-07-21 19:21:19,619 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_created():269] file/dir created: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/requirements.txt
+2022-07-21 19:21:19,620 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_created():269] file/dir created: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/output.log
+2022-07-21 19:21:19,620 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_created():269] file/dir created: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/conda-environment.yaml
+2022-07-21 19:21:19,620 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_created():269] file/dir created: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/wandb-summary.json
+2022-07-21 19:21:21,619 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/output.log
+2022-07-21 19:21:21,674 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:21,674 DEBUG   SenderThread:1788089 [sender.py:send():236] send: exit
+2022-07-21 19:21:21,674 INFO    SenderThread:1788089 [sender.py:send_exit():372] handling exit code: 1
+2022-07-21 19:21:21,675 INFO    SenderThread:1788089 [sender.py:send_exit():374] handling runtime: 3
+2022-07-21 19:21:21,675 INFO    SenderThread:1788089 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-21 19:21:21,675 INFO    SenderThread:1788089 [sender.py:send_exit():380] send defer
+2022-07-21 19:21:21,675 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:21,676 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:21,676 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 0
+2022-07-21 19:21:21,676 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:21,676 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-07-21 19:21:21,676 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 1
+2022-07-21 19:21:21,677 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:21,677 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 1
+2022-07-21 19:21:21,781 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:21,782 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:21,782 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-07-21 19:21:21,782 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 2
+2022-07-21 19:21:21,782 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:21,782 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:21,782 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 2
+2022-07-21 19:21:21,783 DEBUG   SenderThread:1788089 [sender.py:send():236] send: stats
+2022-07-21 19:21:21,783 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:21,783 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-07-21 19:21:21,783 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 3
+2022-07-21 19:21:21,783 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:21,783 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 3
+2022-07-21 19:21:21,783 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:21,783 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-07-21 19:21:21,783 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 4
+2022-07-21 19:21:21,784 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:21,784 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 4
+2022-07-21 19:21:21,784 DEBUG   SenderThread:1788089 [sender.py:send():236] send: summary
+2022-07-21 19:21:21,784 INFO    SenderThread:1788089 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-21 19:21:21,784 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:21,784 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-07-21 19:21:21,784 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 5
+2022-07-21 19:21:21,784 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:21,785 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 5
+2022-07-21 19:21:21,785 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:21,785 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-07-21 19:21:21,883 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:22,561 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 6
+2022-07-21 19:21:22,561 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:22,561 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:22,561 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 6
+2022-07-21 19:21:22,561 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:22,561 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 6
+2022-07-21 19:21:22,562 INFO    SenderThread:1788089 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-07-21 19:21:22,620 INFO    Thread-7  :1788089 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/output.log
+2022-07-21 19:21:22,620 INFO    SenderThread:1788089 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/wandb-summary.json
+2022-07-21 19:21:22,620 INFO    SenderThread:1788089 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/config.yaml
+2022-07-21 19:21:22,620 INFO    SenderThread:1788089 [dir_watcher.py:finish():383] scan: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files
+2022-07-21 19:21:22,621 INFO    SenderThread:1788089 [dir_watcher.py:finish():397] scan save: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/wandb-metadata.json wandb-metadata.json
+2022-07-21 19:21:22,621 INFO    SenderThread:1788089 [dir_watcher.py:finish():397] scan save: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/output.log output.log
+2022-07-21 19:21:22,621 INFO    SenderThread:1788089 [dir_watcher.py:finish():397] scan save: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/conda-environment.yaml conda-environment.yaml
+2022-07-21 19:21:22,621 INFO    SenderThread:1788089 [dir_watcher.py:finish():397] scan save: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/config.yaml config.yaml
+2022-07-21 19:21:22,621 INFO    SenderThread:1788089 [dir_watcher.py:finish():397] scan save: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/requirements.txt requirements.txt
+2022-07-21 19:21:22,625 INFO    SenderThread:1788089 [dir_watcher.py:finish():397] scan save: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/wandb-summary.json wandb-summary.json
+2022-07-21 19:21:22,625 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 7
+2022-07-21 19:21:22,631 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:22,631 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 7
+2022-07-21 19:21:22,631 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:22,631 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 7
+2022-07-21 19:21:22,631 INFO    SenderThread:1788089 [file_pusher.py:finish():171] shutting down file pusher
+2022-07-21 19:21:22,662 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:22,662 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:22,768 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:22,768 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:22,872 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:22,872 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:22,974 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:22,975 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:23,037 INFO    Thread-13 :1788089 [upload_job.py:push():138] Uploaded file /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/config.yaml
+2022-07-21 19:21:23,048 INFO    Thread-14 :1788089 [upload_job.py:push():138] Uploaded file /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/requirements.txt
+2022-07-21 19:21:23,050 INFO    Thread-15 :1788089 [upload_job.py:push():138] Uploaded file /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/wandb-summary.json
+2022-07-21 19:21:23,066 INFO    Thread-12 :1788089 [upload_job.py:push():138] Uploaded file /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/files/output.log
+2022-07-21 19:21:23,077 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:23,077 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:23,179 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:23,180 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:23,267 INFO    Thread-6 (_thread_body):1788089 [sender.py:transition_state():393] send defer: 8
+2022-07-21 19:21:23,268 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:23,268 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 8
+2022-07-21 19:21:23,268 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:23,269 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 8
+2022-07-21 19:21:23,282 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:23,380 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 9
+2022-07-21 19:21:23,381 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:23,381 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:23,381 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 9
+2022-07-21 19:21:23,382 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:23,382 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 9
+2022-07-21 19:21:23,382 INFO    SenderThread:1788089 [sender.py:transition_state():393] send defer: 10
+2022-07-21 19:21:23,382 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: defer
+2022-07-21 19:21:23,382 DEBUG   SenderThread:1788089 [sender.py:send():236] send: final
+2022-07-21 19:21:23,382 INFO    HandlerThread:1788089 [handler.py:handle_request_defer():163] handle defer: 10
+2022-07-21 19:21:23,383 DEBUG   SenderThread:1788089 [sender.py:send():236] send: footer
+2022-07-21 19:21:23,383 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: defer
+2022-07-21 19:21:23,383 INFO    SenderThread:1788089 [sender.py:send_request_defer():389] handle sender defer: 10
+2022-07-21 19:21:23,483 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-21 19:21:23,483 DEBUG   SenderThread:1788089 [sender.py:send_request():250] send_request: poll_exit
+2022-07-21 19:21:23,483 INFO    SenderThread:1788089 [file_pusher.py:join():176] waiting for file pusher
+2022-07-21 19:21:23,831 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: sampled_history
+2022-07-21 19:21:23,832 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: get_summary
+2022-07-21 19:21:23,832 DEBUG   HandlerThread:1788089 [handler.py:handle_request():140] handle_request: shutdown
+2022-07-21 19:21:23,832 INFO    HandlerThread:1788089 [handler.py:finish():806] shutting down handler
+2022-07-21 19:21:24,383 INFO    WriterThread:1788089 [datastore.py:close():279] close: /home/dami/Inverse_GNN/wandb/run-20220721_192118-1f3r0k44/run-1f3r0k44.wandb
+2022-07-21 19:21:24,730 INFO    SenderThread:1788089 [sender.py:finish():1114] shutting down sender
+2022-07-21 19:21:24,730 INFO    SenderThread:1788089 [file_pusher.py:finish():171] shutting down file pusher
+2022-07-21 19:21:24,730 INFO    SenderThread:1788089 [file_pusher.py:join():176] waiting for file pusher
+2022-07-21 19:21:24,732 INFO    MainThread:1788089 [internal.py:handle_exit():80] Internal process exited

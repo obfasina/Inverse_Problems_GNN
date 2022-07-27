@@ -1,0 +1,21 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 83697.02330094807  Validation Loss: 81680.27283000204
+Epoch: 20  Train Loss: 82480.9506929179  Validation Loss: 77717.75625933635
+Epoch: 30  Train Loss: 79819.45147029792  Validation Loss: 73780.2908823285
+Epoch: 40  Train Loss: 75323.18469868143  Validation Loss: 66330.2203395437
+Epoch: 50  Train Loss: 68676.91801617159  Validation Loss: 57218.319044557815
+Epoch: 60  Train Loss: 60530.118571972715  Validation Loss: 48994.812656711496
+Epoch: 70  Train Loss: 50651.946564206766  Validation Loss: 44346.59280857613
+Epoch: 80  Train Loss: 40607.99117720444  Validation Loss: 44734.444101704
+Epoch: 90  Train Loss: 31672.7763878308  Validation Loss: 47228.61964852045
+Epoch: 100  Train Loss: 25229.431193250755  Validation Loss: 48213.622574138215
+Epoch: 110  Train Loss: 17023.9353714792  Validation Loss: 45575.764727302536
+Epoch: 120  Train Loss: 10396.607098195562  Validation Loss: 34875.05277394001
+Epoch: 130  Train Loss: 6247.727670485198  Validation Loss: 25014.717246817425
+Epoch: 140  Train Loss: 4661.471475118928  Validation Loss: 14276.893693400143
+Epoch: 150  Train Loss: 4658.113802726892  Validation Loss: 16583.169549623974
+Epoch: 160  Train Loss: 4176.308833710113  Validation Loss: 10188.42406887363
+Epoch: 170  Train Loss: 3884.3429666094776  Validation Loss: 21255.719186025937
+Epoch: 180  Train Loss: 2644.342015341764  Validation Loss: 7358.577767198676

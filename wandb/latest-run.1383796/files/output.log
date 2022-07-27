@@ -1,0 +1,7 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Epoch: 10  Train Loss: 15208.564791335775  Validation Loss: 15146.590898309067
+Epoch: 20  Train Loss: 15101.991133266523  Validation Loss: 14751.408670502691
+Epoch: 30  Train Loss: 15205.186660306972  Validation Loss: 15143.937703067273
+Epoch: 40  Train Loss: 15359.832274159467  Validation Loss: 15140.786729004203

@@ -1,0 +1,10 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+tensor([[-0.5761],
+        [-0.3737],
+        [-0.4305],
+        ...,
+        [-0.6702],
+        [-0.2603],
+        [-0.7420]], device='cuda:0', grad_fn=<AddmmBackward0>)

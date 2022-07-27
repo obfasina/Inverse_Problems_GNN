@@ -1,0 +1,7 @@
+Time to play:
+Loading lists of data
+(500, 81)
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/apply_GS.py", line 24, in <module>
+    FEMout = fdata.unsqueeze(1).detach().numpy()
+AttributeError: 'numpy.ndarray' object has no attribute 'unsqueeze'. Did you mean: 'squeeze'?

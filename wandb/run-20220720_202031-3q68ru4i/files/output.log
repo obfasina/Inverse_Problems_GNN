@@ -1,0 +1,17 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/apply_GS.py", line 12, in <module>
+    print(fdata.detach().to_numpy())
+AttributeError: 'Tensor' object has no attribute 'to_numpy'
+solution data torch.Size([8100, 1])
+coordinate data (81, 2)
+tensor([[  1.6745,   1.6745,   1.6902,  ...,   2.4402,   2.6745,   2.6745],
+        [  2.4942,   2.2598,   2.5098,  ...,   2.2598,   2.5098,   2.4942],
+        [  3.4002,   2.9315,   3.4159,  ...,   2.1659,   2.4315,   2.4002],
+        ...,
+        [ 98.4318,  75.6974,  98.4474,  ...,   2.1974,   3.9474,   2.4318],
+        [ 99.4964,  76.5277,  99.5120,  ...,   2.2620,   4.0277,   2.4964],
+        [100.7951,  77.5920, 100.8107,  ...,   2.5607,   4.3420,   2.7951]],
+       dtype=torch.float64, requires_grad=True)

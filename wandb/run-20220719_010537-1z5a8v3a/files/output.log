@@ -1,0 +1,14 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 136, in <module>
+    from . import parameter
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/parameter/__init__.py", line 90, in <module>
+    parameters.add(ffc_default_parameters())
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/parameter/__init__.py", line 69, in ffc_default_parameters
+    cpp.MPI.init()

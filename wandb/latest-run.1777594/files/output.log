@@ -1,0 +1,22 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 135, in <module>
+    from . import mesh
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/mesh/__init__.py", line 1, in <module>
+    import ufl
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/__init__.py", line 250, in <module>
+    import pkg_resources
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 32, in <module>
+    import plistlib
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_data

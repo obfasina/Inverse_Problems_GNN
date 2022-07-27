@@ -1,0 +1,14 @@
+Time to play:
+Loading lists of data
+Traceback (most recent call last):
+  File "/Users/oluwadamilolafasina/Inverse_GNN/train_FEM.py", line 212, in <module>
+    wandb.log({"train loss:",train_loss})
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 256, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1543, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/Users/oluwadamilolafasina/opt/anaconda3/envs/inv_gnnenv/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1329, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary

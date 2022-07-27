@@ -1,0 +1,204 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+E 1
+batch 0
+batch 1
+batch 2
+E 2
+batch 0
+batch 1
+batch 2
+E 3
+batch 0
+batch 1
+batch 2
+E 4
+batch 0
+batch 1
+batch 2
+E 5
+batch 0
+batch 1
+batch 2
+E 6
+batch 0
+batch 1
+batch 2
+E 7
+batch 0
+batch 1
+batch 2
+E 8
+batch 0
+batch 1
+batch 2
+E 9
+batch 0
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 162, in <module>
+    u = heat(talph,tbeta)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch_fenics/torch_fenics.py", line 180, in forward
+    outs = [FEniCSFunction.apply(self, *inp) for inp in zip(*args)]
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch_fenics/torch_fenics.py", line 180, in <listcomp>
+    outs = [FEniCSFunction.apply(self, *inp) for inp in zip(*args)]
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch_fenics/torch_fenics.py", line 57, in forward
+    fenics_outputs = fenics_solver.solve(*fenics_inputs)
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 56, in solve
+    a, L = lhs(F), rhs(F)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/formoperators.py", line 78, in lhs
+    form = expand_derivatives(form)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/ad.py", line 45, in expand_derivatives
+    form = apply_derivatives(form)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/apply_derivatives.py", line 1095, in apply_derivatives
+    return map_integrand_dags(rules, expression)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/map_integrands.py", line 57, in map_integrand_dags
+    return map_integrands(lambda expr: map_expr_dag(function, expr, compress),
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/map_integrands.py", line 38, in map_integrands
+    mapped_integrals = [map_integrands(function, itg, only_integral_type)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/map_integrands.py", line 38, in <listcomp>
+    mapped_integrals = [map_integrands(function, itg, only_integral_type)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/map_integrands.py", line 46, in map_integrands
+    return itg.reconstruct(function(itg.integrand()))
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/algorithms/map_integrands.py", line 57, in <lambda>
+    return map_integrands(lambda expr: map_expr_dag(function, expr, compress),
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/corealg/map_dag.py", line 37, in map_expr_dag
+    result, = map_expr_dags(function, [expression], compress=compress)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/corealg/map_dag.py", line 77, in map_expr_dags
+    for v in traversal(expression):
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/corealg/traversal.py", line 147, in cutoff_unique_post_traversal
+    while stacksize > 0:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 135, in <module>
+    from . import mesh
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/mesh/__init__.py", line 1, in <module>
+    import ufl
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/ufl/__init__.py", line 250, in <module>
+    import pkg_resources
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3247, in <module>
+    def _initialize_master_working_set():
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3221, in _call_aside
+    f(*args, **kwargs)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3259, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 570, in _build_master
+    ws = cls()
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 563, in __init__
+    self.add_entry(entry)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 619, in add_entry
+    for dist in find_distributions(entry, True):
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2079, in find_on_path
+    path_item_entries = _by_version_descending(filtered)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2049, in _by_version_descending
+    return sorted(names, key=_by_version, reverse=True)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2072, in <genexpr>
+    filtered = (
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2065, in <genexpr>
+    os.path.join(path_item, child)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/posixpath.py", line 83, in join
+    if b.startswith(sep):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 134, in <module>
+    from . import la
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/la/__init__.py", line 1, in <module>
+    import numpy as np
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/__init__.py", line 144, in <module>
+    from . import core
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/core/__init__.py", line 73, in <module>
+    from . import numeric
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/core/numeric.py", line 2529, in <module>
+    from . import arrayprint
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 674, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 577, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 556, in _init_module_attrs
+  File "<frozen importlib._bootstrap>", line 397, in cached
+  File "<frozen importlib._bootstrap_external>", line 513, in _get_cached
+  File "<frozen importlib._bootstrap_external>", line 406, in cache_from_source
+  File "<frozen importlib._bootstrap_external>", line 134, in _path_split
+  File "<frozen importlib._bootstrap_external>", line 134, in <genexpr>
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 134, in <module>
+    from . import la
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/la/__init__.py", line 1, in <module>
+    import numpy as np
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/__init__.py", line 349, in <module>
+    _sanity_check()
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/__init__.py", line 339, in _sanity_check
+    if not abs(x.dot(x) - 2.0) < 1e-5:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 134, in <module>
+    from . import la
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/la/__init__.py", line 1, in <module>
+    import numpy as np
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/__init__.py", line 144, in <module>
+    from . import core
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/core/__init__.py", line 100, in <module>
+    from . import _add_newdocs_scalars
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/core/_add_newdocs_scalars.py", line 9, in <module>
+    import platform
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/platform.py", line 1258, in <module>
+    _os_release_line = re.compile(
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/re.py", line 251, in compile
+    return _compile(pattern, flags)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/sre_compile.py", line 768, in compile
+    code = _code(p, flags)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/sre_compile.py", line 607, in _code
+    _compile(code, p.data, flags)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/sre_compile.py", line 168, in _compile
+    _compile(code, p, _combine_flags(flags, add_flags, del_flags))
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/sre_compile.py", line 148, in _compile
+    _compile(code, av[2], flags)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/sre_compile.py", line 71, in _compile
+    def _compile(code, pattern, flags):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/fenics_datagen.py", line 4, in <module>
+    from fenics import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/fenics/__init__.py", line 7, in <module>
+    from dolfin import *
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/__init__.py", line 134, in <module>
+    from . import la
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/dolfin/la/__init__.py", line 1, in <module>
+    import numpy as np
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/__init__.py", line 154, in <module>
+    from . import polynomial
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/polynomial/__init__.py", line 116, in <module>
+    from .polynomial import Polynomial
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/polynomial/polynomial.py", line 87, in <module>
+    from ._polybase import ABCPolyBase
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/polynomial/_polybase.py", line 18, in <module>
+    class ABCPolyBase(abc.ABC):
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/abc.py", line 106, in __new__
+    cls = super().__new__(mcls, name, bases, namespace, **kwargs)
+KeyboardInterrupt
+batch 1
+batch 2
+E 10
+batch 0
+batch 1

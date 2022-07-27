@@ -1,0 +1,31 @@
+Time to play:
+Loading lists of data
+graph data Data(x=[81, 1], edge_index=[2, 324], y=[81], pos=[81, 2])
+0
+Debug: (8100, 1)
+1
+Debug: (8100, 1)
+2
+Debug: (8100, 1)
+/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3474: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in true_divide
+  ret = ret.dtype.type(ret / rcount)
+3
+Debug: (4050, 1)
+/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/loss.py:530: UserWarning: Using a target size (torch.Size([4050, 1])) that is different to the input size (torch.Size([8100, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+Traceback (most recent call last):
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 216, in <module>
+    train_loss = train(fopt)
+  File "/home/dami/Inverse_GNN/train_FEMgpu.py", line 149, in train
+    loss = criterion( torch.flatten(fdata).unsqueeze(dim=1).to(torch.double), data.x.cpu().to(torch.double))
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 530, in forward
+    return F.mse_loss(input, target, reduction=self.reduction)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/nn/functional.py", line 3279, in mse_loss
+    expanded_input, expanded_target = torch.broadcast_tensors(input, target)
+  File "/home/dami/anaconda3/envs/fenics_d/lib/python3.10/site-packages/torch/functional.py", line 73, in broadcast_tensors
+    return _VF.broadcast_tensors(tensors)  # type: ignore[attr-defined]
+RuntimeError: The size of tensor a (8100) must match the size of tensor b (4050) at non-singleton dimension 0
